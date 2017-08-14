@@ -4,21 +4,19 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProfessionalsTable extends Migration {
+class CreateSearchKeywordLogTable extends Migration {
 	/**
 	 * Run the migrations.
 	 *
 	 * @return void
 	 */
 	public function up() {
-		Schema::create( 'professionals', function ( Blueprint $table ) {
+		Schema::create( 'search_keyword_log', function ( Blueprint $table ) {
 			$table->increments( 'id' );
-			$table->string( "name", 155 );
-			$table->tinyInteger( "gender_id" )->nullable();
-			$table->date( "birthdate" )->nullable();
-			$table->tinyInteger( "active" )->default( 0 );
+			$table->string( 'keyword', 100 )->nullable();
+			$table->integer( 'result_count' )->default( 0 );
+			$table->string( 'ip', 20 )->nullable();
 			$table->timestamps();
-			$table->softDeletes();
 		} );
 	}
 
@@ -28,6 +26,6 @@ class CreateProfessionalsTable extends Migration {
 	 * @return void
 	 */
 	public function down() {
-		Schema::dropIfExists( 'professionals' );
+		Schema::dropIfExists( 'search_keyword_log' );
 	}
 }

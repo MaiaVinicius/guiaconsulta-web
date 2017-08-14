@@ -20,3 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/posts', 'PostsController@index');
 
 Route::get('/specialties', 'SpecialtiesController@index');
+
+Route::get('/search/{keyword}', 'SearchController@index');
