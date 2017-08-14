@@ -1,27 +1,12 @@
-
 <?php
+
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PostsController
-{
-	public function get()
-	{
-		$posts = App\Post::all();
+class PostsController extends Controller {
+	//
+	function index() {
 
-		return response()->success('posts', $posts);
 	}
-
-	public function update(Request $request)
-	{
-		$this->validate($request, [
-			'title' => 'required',
-			'url'   => 'required|url',
-		]);
-
-		if ( !\Auth::user() ){
-			return response()->error('Not Authorized', 401);
-		}
-	}
-
 }
