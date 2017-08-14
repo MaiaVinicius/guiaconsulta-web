@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 class Search extends Model {
 	static private $keyword;
 
-	static public function findKeyword( $keyword ) {
+	static public function findKeyword( $keyword, $ip ) {
 		$professionals = DB::table( 'professionals' )
 		                   ->select( DB::raw( 'id, name, "2"result_type' ) )
 		                   ->where( [
@@ -41,12 +41,14 @@ class Search extends Model {
 		                 ->unionAll( $vacinnes )
 		                 ->get();
 
-		self::saveLog( $keyword );
+		self::saveLog( $keyword, $ip, count( $specialties ) );
 
 		return $specialties;
 	}
 
-	static private function saveLog( $keyword ) {
-
+	static private function saveLog( $keyword, $ip, $result_count ) {
+		DB::table( 'search_keyword_log' )->insert(
+			[ 'keyword' => $keyword, 'ip' => $ip, 'result_count' => $result_count ]
+		);
 	}
 }

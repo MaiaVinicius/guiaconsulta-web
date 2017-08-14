@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class SearchController extends Controller {
 	//
 	function index( $keyword ) {
-		$result = Search::findKeyword( $keyword );
+		$ip     = \request()->ip();
+		$result = Search::findKeyword( $keyword, $ip );
 
 		return response()->json( $result );
 	}
