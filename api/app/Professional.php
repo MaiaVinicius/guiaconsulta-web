@@ -11,4 +11,6 @@ class Professional extends Model {
 	function specialty() {
 		return $this->belongsTo('App\User');
 	}
+
+
 }

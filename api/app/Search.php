@@ -6,14 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
 class Search extends Model {
-	static private $keyword;
 
 	static public function findKeyword( $keyword, $ip ) {
 		$professionals = DB::table( 'professionals' )
-		                   ->select( DB::raw( 'id, name, "2"result_type' ) )
+		                   ->select( DB::raw( 'professionals.id, users.name, "2"result_type' ) )
+		                   ->join( 'users', 'professionals.user_id', '=', 'users.id' )
 		                   ->where( [
-			                   [ 'name', 'like', '%' . $keyword . '%' ],
-			                   [ 'active', 1 ]
+			                   [ 'users.name', 'like', '%' . $keyword . '%' ],
+			                   [ 'professionals.active', 1 ]
 		                   ] );
 
 		$procedures = DB::table( 'procedures' )
