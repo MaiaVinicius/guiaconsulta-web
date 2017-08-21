@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Tymon\JWTAuth\Facades\JWTAuth;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,19 +14,24 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware( 'auth:api' )->get( '/user', function ( Request $request ) {
+Route::get( '/user', function ( Request $request ) {
 //	return $request->user();
-	return [ "name" => "rodolfo" ];
-} );
+	$token = JWTAuth::getToken();
+	$user = JWTAuth::toUser($token);
+
+	return $user;
+} )->middleware( 'auth:api' );
 
 
-Route::post( 'login', 'Auth\LoginController@login' );
+Route::post( 'login', [
+	'uses' => 'Auth\LoginController@login'
+] );
 
-Route::post( 'register', 'Auth\RegisterController@login' );
+Route::post( 'register', [
+	'uses' => 'Auth\RegisterController@register'
+] );
 
-Route::get( '/login', function ( Request $request ) {
-	return [ "hey" ];
-} );
+Route::get( 'login', [ 'as' => 'login', 'uses' => 'Auth\LoginController@index' ] );
 
 Route::get( '/posts', 'PostsController@index' );
 

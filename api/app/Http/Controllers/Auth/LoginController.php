@@ -5,25 +5,25 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Tymon\JWTAuth\Exceptions\JWTException;
+use Tymon\JWTAuth\Facades\JWTAuth;
 
 class LoginController extends Controller {
 	//
 	function index() {
-		$insurances = \App\Insurance::all();
 
-		return response()->json( $insurances );
+		return response()->json( "NO" );
 	}
 
 	protected function sendLoginResponse( Request $request, $token ) {
 
-		return $this->authenticated( $request, auth()->guard()->user(), $token );
+		return $this->authenticated( $request, JWTAuth::user(), $token );
 	}
 
 	public function login( Request $request ) {
 		$credentials = $request->only( 'email', 'password' );
 
 		try {
-			if ( $token = auth()->guard()->attempt( $credentials )
+			if ( $token = JWTAuth::attempt( $credentials )
 			) {
 				return $this->sendLoginResponse( $request, $token );
 			} else {
