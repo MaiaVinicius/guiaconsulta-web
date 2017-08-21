@@ -14,7 +14,17 @@ use Illuminate\Http\Request;
 */
 
 Route::middleware( 'auth:api' )->get( '/user', function ( Request $request ) {
-	return $request->user();
+//	return $request->user();
+	return [ "name" => "rodolfo" ];
+} );
+
+
+Route::post( 'login', 'Auth\LoginController@login' );
+
+Route::post( 'register', 'Auth\RegisterController@login' );
+
+Route::get( '/login', function ( Request $request ) {
+	return [ "hey" ];
 } );
 
 Route::get( '/posts', 'PostsController@index' );

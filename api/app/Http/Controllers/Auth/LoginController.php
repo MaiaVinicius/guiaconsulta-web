@@ -3,37 +3,46 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Tymon\JWTAuth\Exceptions\JWTException;
 
-class LoginController extends Controller
-{
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
+class LoginController extends Controller {
+	//
+	function index() {
+		$insurances = \App\Insurance::all();
 
-    use AuthenticatesUsers;
+		return response()->json( $insurances );
+	}
 
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/home';
+	protected function sendLoginResponse( Request $request, $token ) {
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('guest')->except('logout');
-    }
+		return $this->authenticated( $request, auth()->guard()->user(), $token );
+	}
+
+	public function login( Request $request ) {
+		$credentials = $request->only( 'email', 'password' );
+
+		try {
+			if ( $token = auth()->guard()->attempt( $credentials )
+			) {
+				return $this->sendLoginResponse( $request, $token );
+			} else {
+				return $this->sendInvalidResponse();
+			}
+		} catch ( JWTException $e ) {
+			return response()->json( [ 'error' => 'something went wrong' ] );
+		}
+	}
+
+	protected function sendInvalidResponse() {
+		return response()->json( [ 'error' => 'invalid credentials' ], 401 );
+	}
+
+	protected function authenticated( Request $request, $user, $token ) {
+		return response()->json( [
+			'token' => $token,
+			'user'  => $user
+		], 200 );
+	}
 }
+
