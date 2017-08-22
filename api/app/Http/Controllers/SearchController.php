@@ -11,8 +11,7 @@ use Mockery\Exception;
 class SearchController extends Controller {
 	//
 	function searchTerm( $keyword ) {
-		$ip     = \request()->ip();
-		$result = Search::findKeyword( $keyword, $ip );
+		$result = Search::findKeyword( $keyword );
 
 		return response()->json( $result );
 	}

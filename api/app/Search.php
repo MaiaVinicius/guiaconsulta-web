@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class Search extends Model {
 
-	static public function findKeyword( $keyword, $ip ) {
+	static public function findKeyword( $keyword ) {
 		$professionals = DB::table( 'professionals' )
 		                   ->select( DB::raw( 'professionals.id, users.name, "2"result_type' ) )
 		                   ->join( 'users', 'professionals.user_id', '=', 'users.id' )
@@ -41,7 +41,7 @@ class Search extends Model {
 		                 ->unionAll( $vacinnes )
 		                 ->get();
 
-		self::saveLog( $keyword, $ip, count( $specialties ) );
+		self::saveLog( $keyword, request()->ip(), count( $specialties ) );
 
 		return $specialties;
 	}
