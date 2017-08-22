@@ -40,6 +40,6 @@ Route::get( '/posts', 'PostsController@index' );
 
 Route::get( '/specialties', 'SpecialtiesController@index' );
 
-Route::get( '/search/{keyword}', 'SearchController@searchTerm' );
+Route::get( '/search-term/{keyword}', 'SearchController@searchTerm' );
 
 Route::get( '/insurances', 'InsurancesController@index' );
