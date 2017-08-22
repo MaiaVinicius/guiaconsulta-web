@@ -179,7 +179,7 @@ return [
 	    Jadjoubran\LaravelAngular\Provider\LaravelServiceProvider::class,
 	    Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
 	    Irazasyed\JwtAuthGuard\JwtAuthGuardServiceProvider::class,
-
+	    App\Providers\SearchProvider::class
     ],
 
     /*

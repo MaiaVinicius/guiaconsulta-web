@@ -17,7 +17,7 @@ use Tymon\JWTAuth\Facades\JWTAuth;
 Route::get( '/user', function ( Request $request ) {
 //	return $request->user();
 	$token = JWTAuth::getToken();
-	$user = JWTAuth::toUser($token);
+	$user  = JWTAuth::toUser( $token );
 
 	return $user;
 } )->middleware( 'auth:api' );
@@ -31,12 +31,15 @@ Route::post( 'register', [
 	'uses' => 'Auth\RegisterController@register'
 ] );
 
+Route::get( 'search/{specialty?}/{location?}/{payment?}',
+	[ 'as' => 'login', 'uses' => 'SearchController@search' ] );
+
 Route::get( 'login', [ 'as' => 'login', 'uses' => 'Auth\LoginController@index' ] );
 
 Route::get( '/posts', 'PostsController@index' );
 
 Route::get( '/specialties', 'SpecialtiesController@index' );
 
-Route::get( '/search/{keyword}', 'SearchController@index' );
+Route::get( '/search/{keyword}', 'SearchController@searchTerm' );
 
 Route::get( '/insurances', 'InsurancesController@index' );

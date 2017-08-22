@@ -3,14 +3,50 @@
 namespace App\Http\Controllers;
 
 use App\Search;
+use App\Specialty;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
+use Mockery\Exception;
 
 class SearchController extends Controller {
 	//
-	function index( $keyword ) {
+	function searchTerm( $keyword ) {
 		$ip     = \request()->ip();
 		$result = Search::findKeyword( $keyword, $ip );
 
 		return response()->json( $result );
+	}
+
+
+	function search( $specialty = false, $location = false, $payment = false ) {
+		$ip = \request()->ip();
+
+		$s = Specialty::where( 'specialist', 'like', '%' . $specialty . '%' )->get();
+
+
+		$latlng = $this->addressToLatLng( $location );
+
+
+		return response()->json( [ 'oooo', 's' => $s, 'location' => $latlng ] );
+	}
+
+
+	function addressToLatLng( $address ) {
+		$url = "https://maps.googleapis.com/maps/api/geocode/json";
+
+		$client = new Client();
+		$res    = $client->request( 'GET', $url,
+			[
+				'query' => [
+					'address' => $address,
+					'key'     => 'AIzaSyA2RpD2PmtzXTJe9gTC_KBgtHxCx53hwWU',
+				]
+			]
+		)->getBody()->getContents();
+
+		$res    = \GuzzleHttp\json_decode( $res, true );
+		$latlng = $res["results"][0]["geometry"]["location"];
+
+		return $latlng;
 	}
 }
