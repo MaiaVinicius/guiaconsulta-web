@@ -31,7 +31,7 @@ Route::post( 'register', [
 	'uses' => 'Auth\RegisterController@register'
 ] );
 
-Route::get( 'search/{specialty?}/{location?}/{payment?}',
+Route::get( 'search/{keyword?}/{location?}/{payment?}',
 	[ 'as' => 'login', 'uses' => 'SearchController@search' ] );
 
 Route::get( 'login', [ 'as' => 'login', 'uses' => 'Auth\LoginController@index' ] );

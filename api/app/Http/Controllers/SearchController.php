@@ -17,8 +17,8 @@ class SearchController extends Controller {
 	}
 
 
-	function search( $specialty = false, $location = false, $payment = false ) {
-		$s = Specialty::where( 'specialist', 'like', '%' . $specialty . '%' )->get();
+	function search( $keyword = false, $location = false, $payment = false ) {
+		$s = Specialty::where( 'specialist', 'like', '%' . $keyword . '%' )->get();
 
 
 		$latlng = $this->addressToLatLng( $location );
