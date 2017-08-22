@@ -13,7 +13,7 @@ class CreateSearchLogTable extends Migration {
 	public function up() {
 		Schema::create( 'search_log', function ( Blueprint $table ) {
 			$table->increments( 'id' );
-			$table->float( 'keyword', 200 );
+			$table->string( 'keyword', 200 );
 			$table->string( 'location', 155 );
 			$table->float( 'lat' );
 			$table->float( 'lng' );
