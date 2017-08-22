@@ -24,6 +24,8 @@ class SearchController extends Controller {
 		$latlng = $this->addressToLatLng( $location );
 
 
+
+
 		return response()->json( [ 'oooo', 's' => $s, 'location' => $latlng ] );
 	}
 

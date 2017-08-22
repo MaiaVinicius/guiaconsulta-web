@@ -41,14 +41,31 @@ class Search extends Model {
 		                 ->unionAll( $vacinnes )
 		                 ->get();
 
-		self::saveLog( $keyword, request()->ip(), count( $specialties ) );
+		self::saveLogKeyword( $keyword, count( $specialties ) );
 
 		return $specialties;
 	}
 
-	static private function saveLog( $keyword, $ip, $result_count ) {
+	static private function saveLogKeyword( $keyword, $result_count ) {
 		DB::table( 'search_keyword_log' )->insert(
-			[ 'keyword' => $keyword, 'ip' => $ip, 'result_count' => $result_count ]
+			[
+				'keyword'      => $keyword,
+				'ip'           => request()->ip(),
+				'result_count' => $result_count
+			]
+		);
+	}
+
+	static private function saveLog( $keyword, $latlng, $location, $result_count ) {
+		DB::table( 'search_log' )->insert(
+			[
+				'keyword'      => $keyword,
+				'ip'           => request()->ip(),
+				'location'     => $location,
+				'lat'          => $latlng["lat"],
+				'lng'          => $latlng["lng"],
+				'result_count' => $result_count
+			]
 		);
 	}
 }
