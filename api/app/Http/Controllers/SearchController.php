@@ -18,8 +18,6 @@ class SearchController extends Controller {
 
 
 	function search( $specialty = false, $location = false, $payment = false ) {
-		$ip = \request()->ip();
-
 		$s = Specialty::where( 'specialist', 'like', '%' . $specialty . '%' )->get();
 
 
