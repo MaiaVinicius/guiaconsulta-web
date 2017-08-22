@@ -56,7 +56,7 @@ class Search extends Model {
 		);
 	}
 
-	static private function saveLog( $keyword, $latlng, $location, $result_count ) {
+	static public function saveLog( $keyword, $latlng, $location, $result_count ) {
 		DB::table( 'search_log' )->insert(
 			[
 				'keyword'      => $keyword,
