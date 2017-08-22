@@ -31,7 +31,7 @@ class SearchController extends Controller {
 		Search::saveLog( $keyword, $latlng, $location, 0 );
 
 
-		return response()->json( [ 'oooo', 's' => $s, 'location' => $latlng ] );
+		return response()->json( ['s' => $s, 'location' => $latlng ] );
 	}
 
 
