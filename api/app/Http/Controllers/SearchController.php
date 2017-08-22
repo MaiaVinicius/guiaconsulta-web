@@ -21,9 +21,14 @@ class SearchController extends Controller {
 		$s = Specialty::where( 'specialist', 'like', '%' . $keyword . '%' )->get();
 
 
-		$latlng = $this->addressToLatLng( $location );
+		if ( $locationCache = Search::getLatLngCache( $location ) ) {
+			$latlng = (array) $locationCache;
+		} else {
+			$latlng = $this->addressToLatLng( $location );
+		}
 
 
+		Search::saveLog( $keyword, $latlng, $location, 0 );
 
 
 		return response()->json( [ 'oooo', 's' => $s, 'location' => $latlng ] );

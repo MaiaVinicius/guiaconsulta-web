@@ -47,25 +47,36 @@ class Search extends Model {
 	}
 
 	static private function saveLogKeyword( $keyword, $result_count ) {
-		DB::table( 'search_keyword_log' )->insert(
-			[
-				'keyword'      => $keyword,
-				'ip'           => request()->ip(),
-				'result_count' => $result_count
-			]
-		);
+		DB::table( 'search_keyword_log' )
+		  ->insert(
+			  [
+				  'keyword'      => $keyword,
+				  'ip'           => request()->ip(),
+				  'result_count' => $result_count
+			  ]
+		  );
 	}
 
 	static public function saveLog( $keyword, $latlng, $location, $result_count ) {
-		DB::table( 'search_log' )->insert(
-			[
-				'keyword'      => $keyword,
-				'ip'           => request()->ip(),
-				'location'     => $location,
-				'lat'          => $latlng["lat"],
-				'lng'          => $latlng["lng"],
-				'result_count' => $result_count
-			]
-		);
+		DB::table( 'search_log' )
+		  ->insert(
+			  [
+				  'keyword'      => $keyword,
+				  'ip'           => request()->ip(),
+				  'location'     => $location,
+				  'lat'          => $latlng["lat"],
+				  'lng'          => $latlng["lng"],
+				  'result_count' => $result_count
+			  ]
+		  );
+	}
+
+	static public function getLatLngCache( $location ) {
+		return DB::table( 'search_log' )
+		         ->select( DB::raw( 'lat,lng' ) )
+		         ->where( [
+			         [ 'location', $location ],
+		         ] )
+		         ->get()->first();
 	}
 }
