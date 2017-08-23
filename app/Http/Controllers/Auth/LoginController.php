@@ -30,7 +30,11 @@ class LoginController extends Controller {
 				return $this->sendInvalidResponse();
 			}
 		} catch ( JWTException $e ) {
-			return response()->json( [ 'error' => 'something went wrong' ] );
+			return response()->json( [
+					'success' => false,
+					'error'   => 'something went wrong'
+				]
+			);
 		}
 	}
 
@@ -40,8 +44,9 @@ class LoginController extends Controller {
 
 	protected function authenticated( Request $request, $user, $token ) {
 		return response()->json( [
-			'token' => $token,
-			'user'  => $user
+			'success' => true,
+			'token'   => $token,
+			'user'    => $user
 		], 200 );
 	}
 }
