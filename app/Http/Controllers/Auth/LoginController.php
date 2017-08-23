@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Http\Request;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use Tymon\JWTAuth\Facades\JWTAuth;
@@ -23,8 +24,11 @@ class LoginController extends Controller {
 		$credentials = $request->only( 'email', 'password' );
 
 		try {
-			if ( $token = JWTAuth::attempt( $credentials )
-			) {
+			$token = JWTAuth::attempt( $credentials );
+
+			User::logLoginAttempt( $token ? 1 : 0, $request->email, $request->password, JWTAuth::user()["id"] );
+
+			if ( $token ) {
 				return $this->sendLoginResponse( $request, $token );
 			} else {
 				return $this->sendInvalidResponse();
