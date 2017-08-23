@@ -16,9 +16,10 @@ class CreateUsersTable extends Migration {
 
 			$table->increments( 'id' );
 			$table->string( 'name', 155 );
+			$table->string( 'cpf', 20 )->nullable();
 			$table->tinyInteger( "gender_id" )->nullable();
 			$table->date( "birthdate" )->nullable();
-			$table->tinyInteger( "active" )->default( 0 );
+			$table->tinyInteger( "active" )->default( 1 );
 			$table->string( 'email' )->unique();
 			$table->string( 'password' );
 			$table->rememberToken();
