@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get( '/', function () {
+	return view( 'index' );
+} );
+
+
+Route::get( '/{catchall?}', function ( $catchall ) {
+	return response()->redirectTo( '/#/' . $catchall );
+} )->where( 'catchall', '(.*)' );
