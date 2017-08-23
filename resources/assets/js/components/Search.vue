@@ -6,7 +6,9 @@
                     <div class="panel-heading">the search</div>
 
                     <div class="panel-body">
-                        I'm an example component!
+                        {{term}}
+                        {{location}}
+                        {{payment}}
                     </div>
                 </div>
             </div>
@@ -18,7 +20,18 @@
     export default {
         name: 'Search',
         mounted () {
-            console.log(this.$route.params)
+            let p = this.$route.params;
+
+            this.location = p.location;
+            this.payment = p.payment;
+            this.term = p.term;
+        },
+        data () {
+            return {
+                location: false,
+                payment: false,
+                term: false,
+            }
         }
     }
 </script>

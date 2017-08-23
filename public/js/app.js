@@ -10987,7 +10987,6 @@ __webpack_require__(12);
 
 window.Vue = __webpack_require__(9);
 
-console.log('vue started');
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -44601,11 +44600,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'Search',
     mounted: function mounted() {
-        console.log(this.$route.params);
+        var p = this.$route.params;
+
+        this.location = p.location;
+        this.payment = p.payment;
+        this.term = p.term;
+    },
+    data: function data() {
+        return {
+            location: false,
+            payment: false,
+            term: false
+        };
     }
 });
 
@@ -44614,8 +44626,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "container"
   }, [_c('div', {
@@ -44628,8 +44638,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "panel-heading"
   }, [_vm._v("the search")]), _vm._v(" "), _c('div', {
     staticClass: "panel-body"
-  }, [_vm._v("\n                    I'm an example component!\n                ")])])])])])
-}]}
+  }, [_vm._v("\n                    " + _vm._s(_vm.term) + "\n                    " + _vm._s(_vm.location) + "\n                    " + _vm._s(_vm.payment) + "\n                ")])])])])])
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
