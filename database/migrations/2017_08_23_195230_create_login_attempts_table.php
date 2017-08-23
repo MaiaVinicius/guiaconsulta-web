@@ -11,7 +11,7 @@ class CreateLoginAttemptsTable extends Migration {
 	 * @return void
 	 */
 	public function up() {
-		Schema::create( 'login_attempts', function ( Blueprint $table ) {
+		Schema::create( 'login_attempts_log', function ( Blueprint $table ) {
 			$table->increments( 'id' );
 			$table->tinyInteger( 'success' );
 			$table->integer( 'user_id' );
