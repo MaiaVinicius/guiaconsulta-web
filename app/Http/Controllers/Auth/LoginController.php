@@ -10,10 +10,6 @@ use Tymon\JWTAuth\Facades\JWTAuth;
 
 class LoginController extends Controller {
 	//
-	function index() {
-
-		return response()->json( "NO" );
-	}
 
 	protected function sendLoginResponse( Request $request, $token ) {
 
