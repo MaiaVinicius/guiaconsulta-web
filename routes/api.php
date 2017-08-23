@@ -13,14 +13,15 @@ use Tymon\JWTAuth\Facades\JWTAuth;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
-Route::get( '/user', function ( Request $request ) {
+Route::group( [ 'middleware' => 'auth:api' ], function () {
+	Route::get( '/user', function ( Request $request ) {
 //	return $request->user();
-	$token = JWTAuth::getToken();
-	$user  = JWTAuth::toUser( $token );
+		$token = JWTAuth::getToken();
+		$user  = JWTAuth::toUser( $token );
 
-	return $user;
-} )->middleware( 'auth:api' );
+		return $user;
+	} );
+} );
 
 
 Route::post( 'login', [
