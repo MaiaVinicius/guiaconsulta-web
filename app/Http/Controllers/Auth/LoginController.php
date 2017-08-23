@@ -16,7 +16,7 @@ class LoginController extends Controller {
 
 	protected function sendLoginResponse( Request $request, $token ) {
 
-		return $this->authenticated( $request, JWTAuth::user(), $token );
+		return $this->authenticated( JWTAuth::user(), $token );
 	}
 
 	public function login( Request $request ) {
@@ -42,7 +42,7 @@ class LoginController extends Controller {
 		return response()->json( [ 'error' => 'invalid credentials' ], 401 );
 	}
 
-	protected function authenticated( Request $request, $user, $token ) {
+	protected function authenticated( $user, $token ) {
 		return response()->json( [
 			'success' => true,
 			'token'   => $token,
