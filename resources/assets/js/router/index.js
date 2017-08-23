@@ -16,11 +16,12 @@ export default new Router({
         {
             path: '/search/:term?/:location?/:payment?',
             name: 'Search',
+            props: true,
             component: Search
         },
         {
             path: '/404',
-            name: 'Not Found',
+            name: '404',
             component: NotFound
         },
         {

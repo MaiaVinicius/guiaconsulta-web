@@ -16,8 +16,9 @@
 
 <script>
     export default {
-        mounted() {
-            console.log('Component mounted.')
+        name: 'Search',
+        mounted () {
+            console.log(this.$route.params)
         }
     }
 </script>

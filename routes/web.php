@@ -11,11 +11,15 @@
 |
 */
 
-Route::get( '/', function () {
-	return view( 'index' );
+
+Route::group( [ 'middleware' => 'web' ], function () {
+	Route::get( '/', function () {
+		return view( 'index' );
+	} );
+
+
+	Route::get( '/{catchall?}', function ( $catchall ) {
+		return response()->redirectTo( '/#/' . $catchall );
+	} )->where( 'catchall', '(.*)' );
+
 } );
-
-
-Route::get( '/{catchall?}', function ( $catchall ) {
-	return response()->redirectTo( '/#/' . $catchall );
-} )->where( 'catchall', '(.*)' );
