@@ -21,6 +21,11 @@ Route::group( [ 'middleware' => 'auth:api' ], function () {
 
 		return $user;
 	} );
+
+
+	Route::prefix( 'wizard' )->group( function () {
+		Route::get( '/', 'PatientWizardController@index' );
+	} );
 } );
 
 
@@ -35,7 +40,6 @@ Route::post( 'register', [
 Route::get( 'search/{keyword?}/{location?}/{payment?}',
 	[ 'as' => 'login', 'uses' => 'SearchController@search' ] );
 
-Route::get( 'login', [ 'as' => 'login', 'uses' => 'Auth\LoginController@index' ] );
 
 Route::get( '/posts', 'PostsController@index' );
 
