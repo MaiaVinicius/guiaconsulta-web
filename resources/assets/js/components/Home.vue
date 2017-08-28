@@ -138,7 +138,7 @@
                         a facilidade que faltava e a seu medico a praticidade que ele buscava. Controle seus alarmes de
                         medicamentos, verifique as melhores drogarias para adquirir os itens da sua receita e ainda receba dicas
                         dos laboratórios mais perto de você que oferecem o exame que seu médico acabou de lhe prescrever. </p>
-                    <a href="#" class="btn btn-outline-success mtop20"> É profissional da saúde? Clique aqui!</a>
+                    <a href="#/register/professional" class="btn btn-outline-success mtop20"> É profissional da saúde? Clique aqui!</a>
                 </div>
             </div>
         </div>

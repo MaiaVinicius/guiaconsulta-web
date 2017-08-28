@@ -44833,7 +44833,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v("Transformamos a forma de relacionamento entre médico e paciente, trazendo a você\n                    a facilidade que faltava e a seu medico a praticidade que ele buscava. Controle seus alarmes de\n                    medicamentos, verifique as melhores drogarias para adquirir os itens da sua receita e ainda receba dicas\n                    dos laboratórios mais perto de você que oferecem o exame que seu médico acabou de lhe prescrever. ")]), _vm._v(" "), _c('a', {
     staticClass: "btn btn-outline-success mtop20",
     attrs: {
-      "href": "#"
+      "href": "#/register/professional"
     }
   }, [_vm._v(" É profissional da saúde? Clique aqui!")])])])])
 }]}
