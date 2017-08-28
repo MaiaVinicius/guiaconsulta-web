@@ -1,0 +1,176 @@
+.navbar-transparent{
+
+    background:transparent!important;
+
+}
+
+body{color:#888}
+
+a{color: #888;}
+
+a:hover{color: forestgreen;}
+.header{background: url(../images/banner/3.jpg);
+background-size: cover;}
+
+.jumbotron{background: transparent; color:#fff; min-height: 500px; padding-top:120px}
+.mainLogo{max-width:250px}
+.whiteBg {background: #fff; margin-right: 15px; margin-top: 15px}
+.homeForm{height: 80px; padding: 8px}
+.btn-full{height: 80px; margin-top: 5px; font-size:25px; border-radius:0px !important;}
+
+.formHomeHolder{margin-top:60px;}
+
+.blueBg{background: #2D9CD7; padding: 30px;}
+.dark{color:#fff;}
+.dark a{color:#fff;}
+img {max-width:100%}
+.floating{
+    
+    margin-top: -100px;
+    
+}
+.simpleBg{background: #fff; color:#888}
+.showApp{ margin-top: 80px;}
+
+.dBtn{
+    
+    max-width: 200px;
+}
+
+h1,h2,h3,h4 {font-weight:300; color: #2d9cd7}
+.p20{padding: 20px 0}
+
+.p30{padding: 30px 0}
+
+.p80{padding: 80px 0}
+.mtop20{margin-top:20px}
+
+.mtop40{margin-top:40px}
+.mtop60{margin-top:60px}
+.pt20{padding-top: 20px}
+.hWhite{color:#fff}
+
+
+
+footer ul{ margin: 0; padding: 0; list-style: none;}
+footer ul li{margin: 10px 0}
+
+footer h3{color:#2d9cd7; font-weight: 600;}
+.header-blue{background:#2d9cd7}
+
+.greyBg{background: #eee;}
+.btnHolder{padding-top: 8px}
+.searchInside{
+    color:#888; 
+    font-size: 14px; padding-top: 5px;
+    
+}
+.searchInside .form-control{ border-radius: 0px; border:0; padding:15px}
+
+.searchInside .col-md-4,.searchInside .col-md-3{
+    padding-top: 10px
+
+   
+    
+}
+.topSearchBtn{
+    
+    height: 50px;
+    width: 50px;
+}
+
+.colorBase{background:#2d9cd7}
+
+.btn-group.date{width: 100%;}
+.dataHolder .btn{width:12%;}
+.dataHolder{background: #f8f9fa;}
+.avatar{max-width: 150px; margin: 0 15px;}
+.card{padding-top: 30px}
+
+
+
+.titHolder{float: left;}
+.card{width: 95% !Important; margin:0 auto !important;}
+.card h6{font-weight: 300; font-size: 12px}
+.cardInfo img{display: inline-block; width: 10px; height: 18px; margin-right: 3px;}
+.cardInfo{color:#888; font-size:11px; padding: 10px 0;}
+.card-text{font-weight: 500; font-size: 13px; color:#999}
+
+.cardTime .btn{ border-radius:15px;}
+.cardTime {padding:15px 0}
+.priceConsul{display: block; color:#2d9cd7}
+.closeBtn{position: absolute;
+top:0;
+right:0;
+font-size: 15px; font-weight: 600;
+width:50px;
+    height: 50px; border:1px solid #ddd;
+}
+
+.faceBtn{background: #3b5998; color: #fff;}
+ 
+.faceBtn i, .googleBtn i {margin-right: auto; font-size:16px;  }
+
+.faceBtn , .googleBtn {font-size:14px;  width: 50%}
+
+.googleBtn{background: #f3553c; color: #fff}
+
+.contentModal{ width: 80%; margin: 0 auto;}
+
+ .input-group-addon{
+    min-width:40px;
+    border-radius: 0 !important
+}
+
+
+.contentModal .input-group { margin: 15px 0}
+
+
+.smallTit{text-align: center;font-size:14px}
+
+.textModal{font-size:14px; color:#999; text-align: center; display: inline-block}
+.contentModal .form-control{border-radius: 0 !important; padding:15px}
+.lembreMe{margin:15px 0; padding: 15px 0; color:#888; font-size: 14px}
+
+.btnLogin{ width:60%; margin: 15px auto; display: block; border-radius: 60px; text-transform: uppercase; padding: 15px}
+
+.otherText{font-size: 14px; text-align: center; }
+.btn-fancy-radio {
+    width: 50%;font-size:14px; text-align: left; color:#888; 
+}
+.fancy-radio-group .btn-fancy-radio img{display:none; margin-right: 5px;}
+.fancy-radio-group .btn-fancy-radio .normal{display:inline-block;}
+.fancy-radio-group .btn-fancy-radio.active .normal{display:none;}
+.fancy-radio-group .btn-fancy-radio.active .checked{display:inline-block;}
+
+.fancy-radio-group {
+    width: 100% !important; 
+}
+h5, h6, h7{font-weight:400; color:#888}
+
+.legenda{font-size: 12px; color:#888; display: block;}
+.bs{box-shadow: 0px 1px 5px #ddd; padding: 30px}
+.subLine{border-bottom:1px solid #ddd; margin-bottom: 15px}
+/* 480px*/
+@media screen and (max-width: 480px) {
+    
+    
+    
+}
+
+/* fim 480 inicio 320*/
+
+@media screen and (max-width: 320px) {
+    
+    
+    
+}
+
+
+/* fim 320 inicio 600*/
+
+@media screen and (max-width: 600px) {
+    .hidden-xs{display: none;}
+    
+    
+}
