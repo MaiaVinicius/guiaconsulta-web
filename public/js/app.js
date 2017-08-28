@@ -46174,6 +46174,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -46184,19 +46185,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             current_step: 1,
             steps: [{
                 id: 1,
-                label: 'Dados do perfil'
+                label: 'Dados do perfil',
+                url: '#step-1'
             }, {
                 id: 2,
-                label: 'Foto'
+                label: 'Foto',
+                url: '#step-2'
             }, {
                 id: 3,
-                label: 'Especialidades'
+                label: 'Especialidades',
+                url: '#step-3'
             }, {
                 id: 4,
-                label: 'Consultórios'
+                label: 'Consultórios',
+                url: '#step-4'
+
             }, {
                 id: 5,
-                label: 'Preços e convenios'
+                label: 'Preços e convenios',
+                url: '#step-5'
             }]
         };
     }
@@ -46222,7 +46229,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     }, [_c('a', {
       attrs: {
-        "href": "#"
+        "href": step.url
       }
     }, [_c('h4', {
       staticClass: "list-group-item-heading"

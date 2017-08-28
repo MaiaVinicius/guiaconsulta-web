@@ -24,13 +24,14 @@
 
                 <div class="col-md-12 wizard">
                     <ul class="nav nav-pills nav-justified thumbnail setup-panel">
-                        <li v-for="step in steps" v-bind:class="{ disabled: current_step != step.id, active: current_step == step.id }">
-                            <a href="#">
-                            <h4 class="list-group-item-heading">
-                                <button class="btn btn-circle btn-info">{{step.id}}</button>
-                            </h4>
-                            <p class="list-group-item-text hidden-xs"> {{step.label}}</p>
-                        </a></li>
+                        <li v-for="step in steps"
+                            v-bind:class="{ disabled: current_step != step.id, active: current_step == step.id }">
+                            <a :href="step.url">
+                                <h4 class="list-group-item-heading">
+                                    <button class="btn btn-circle btn-info">{{step.id}}</button>
+                                </h4>
+                                <p class="list-group-item-text hidden-xs"> {{step.label}}</p>
+                            </a></li>
                     </ul>
                 </div>
             </div>
@@ -312,19 +313,25 @@
                 current_step: 1,
                 steps: [{
                     id: 1,
-                    label: 'Dados do perfil'
+                    label: 'Dados do perfil',
+                    url: '#step-1'
                 }, {
                     id: 2,
-                    label: 'Foto'
+                    label: 'Foto',
+                    url: '#step-2'
                 }, {
                     id: 3,
-                    label: 'Especialidades'
+                    label: 'Especialidades',
+                    url: '#step-3'
                 }, {
                     id: 4,
-                    label: 'Consultórios'
+                    label: 'Consultórios',
+                    url: '#step-4'
+
                 }, {
                     id: 5,
-                    label: 'Preços e convenios'
+                    label: 'Preços e convenios',
+                    url: '#step-5'
                 }]
             }
         }
