@@ -52,7 +52,7 @@
 
                                 <div class="input-group mb-sm-0 mtop20">
                                     <div class="input-group-addon"><i class="fa fa-address-card" aria-hidden="true"></i></div>
-                                    <input type="text" class="form-control"  placeholder="CPF">
+                                    <input type="text" class="form-control cpf"  placeholder="CPF">
                                 </div>
                             </div>
                         </Div>
@@ -64,7 +64,7 @@
                         <div class="col-md-6">
                             <div class="input-group  mtop20">
                                 <div class="input-group-addon"><i class="fa fa-tag" aria-hidden="true"></i></div>
-                                <input type="text" class="form-control"  placeholder="CEP">
+                                <input type="text" class="form-control cep"  placeholder="CEP">
                             </div>
                         </div>
 
@@ -124,7 +124,7 @@
                         <div class="col-md-8">
                             <div class="input-group  mtop20">
                                 <div class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></div>
-                                <input type="text" class="form-control"
+                                <input type="text" class="form-control phone"
                                        placeholder="Telefone do Consultório">
                             </div>
                         </div>
@@ -138,7 +138,7 @@
                         <div class="col-md-12">
                             <div class="input-group  mtop20">
                                 <div class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
-                                <input type="text" class="form-control"  placeholder="E-mail">
+                                <input type="email" class="form-control"  placeholder="E-mail">
                             </div>
 
                         </div>
@@ -159,7 +159,7 @@
                         <div class="col-md-8">
                             <div class="input-group  mtop20">
                                 <div class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></div>
-                                <input type="text" class="form-control"
+                                <input type="text" class="form-control phone"
                                        placeholder="Telefone do Administrador">
                             </div>
                         </div>

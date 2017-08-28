@@ -44713,10 +44713,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "navbar-nav mr-auto"
   }), _vm._v(" "), _c('form', {
     staticClass: "form-inline my-2 my-lg-0"
-  }, [_c('button', {
+  }, [_c('a', {
     staticClass: "btn btn-outline-warning my-2 my-sm-0",
     attrs: {
-      "type": "submit"
+      "href": "#/register/professional"
     }
   }, [_vm._v("\n                            Profissional da saúde? Clique\n                            aqui!\n                        ")])])])])]), _vm._v(" "), _c('div', {
     staticClass: "jumbotron"
@@ -45405,7 +45405,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "aria-hidden": "true"
     }
   })]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
+    staticClass: "form-control cpf",
     attrs: {
       "type": "text",
       "placeholder": "CPF"
@@ -45440,7 +45440,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "aria-hidden": "true"
     }
   })]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
+    staticClass: "form-control cep",
     attrs: {
       "type": "text",
       "placeholder": "CEP"
@@ -45592,7 +45592,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "aria-hidden": "true"
     }
   })]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
+    staticClass: "form-control phone",
     attrs: {
       "type": "text",
       "placeholder": "Telefone do Consultório"
@@ -45619,7 +45619,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   })]), _vm._v(" "), _c('input', {
     staticClass: "form-control",
     attrs: {
-      "type": "text",
+      "type": "email",
       "placeholder": "E-mail"
     }
   })])])
@@ -45674,7 +45674,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "aria-hidden": "true"
     }
   })]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
+    staticClass: "form-control phone",
     attrs: {
       "type": "text",
       "placeholder": "Telefone do Administrador"
@@ -46697,7 +46697,7 @@ module.exports = Component.exports
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('div', {
+  return _c('div', [_c('footer', [_c('div', {
     staticClass: "container"
   }, [_c('div', {
     staticClass: "row"
@@ -46791,7 +46791,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "href": "#"
     }
-  }, [_vm._v("Quer trabalhar conosco?")])], 1)])])])]), _vm._v(" "), _vm._m(0)])
+  }, [_vm._v("Quer trabalhar conosco?")])], 1)])])])]), _vm._v(" "), _vm._m(0)])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "container-flui mtop20 blueBg dark"

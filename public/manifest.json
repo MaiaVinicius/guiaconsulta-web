@@ -1,0 +1,16 @@
+{
+  "name": "Guia Consulta",
+  "short_name": "GuiaConsulta",
+  "icons": [
+    {
+      "src": "/guiaconsulta-36x36.png",
+      "sizes": "36x36",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#2d9cd7",
+  "theme_color": "#2d9cd7"
+}

@@ -33,10 +33,10 @@
                         </ul>
                         <form class="form-inline my-2 my-lg-0">
 
-                            <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">
+                            <a class="btn btn-outline-warning my-2 my-sm-0" href="#/register/professional">
                                 Profissional da saúde? Clique
                                 aqui!
-                            </button>
+                            </a>
                         </form>
                     </div>
                 </nav>

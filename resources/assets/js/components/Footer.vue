@@ -1,6 +1,6 @@
 <template>
     <div>
-
+<footer>
         <div class="container">
             <div class="row">
 
@@ -54,6 +54,6 @@
         <div class="container-flui mtop20 blueBg dark">
             <div class="container"><p>&copy; Company 2017</p></div>
 
-        </div>
+        </div></footer>
     </div>
 </template>
