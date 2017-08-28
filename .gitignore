@@ -12,3 +12,4 @@ yarn-error.log
 .env
 .env.example
 public/js/app.js
+/public/css/vuetify.css

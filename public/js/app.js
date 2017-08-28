@@ -10993,7 +10993,8 @@ window.Vue = __webpack_require__(9);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', __webpack_require__(48));
+Vue.component('app-header', __webpack_require__(74));
+Vue.component('app-footer', __webpack_require__(71));
 
 var app = new Vue({
   el: '#app',
@@ -41895,10 +41896,19 @@ module.exports = function spread(callback) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Home_vue__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Home_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_Home_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Search_vue__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Search_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_Search_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_NotFound_vue__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_NotFound_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_NotFound_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_RegisterProfessional_vue__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_RegisterProfessional_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_RegisterProfessional_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_RegisterProfessionalActivate_vue__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_RegisterProfessionalActivate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_RegisterProfessionalActivate_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_WizardProfessional_vue__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_WizardProfessional_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_WizardProfessional_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Search_vue__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Search_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__components_Search_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_NotFound_vue__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_NotFound_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__components_NotFound_vue__);
+
+
+
 
 
 
@@ -41913,18 +41923,30 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
         name: 'Home',
         component: __WEBPACK_IMPORTED_MODULE_2__components_Home_vue___default.a
     }, {
+        path: '/register/professional',
+        name: 'RegisterProfessional',
+        component: __WEBPACK_IMPORTED_MODULE_3__components_RegisterProfessional_vue___default.a
+    }, {
+        path: '/register/professional/activate',
+        name: 'RegisterProfessionalActivate',
+        component: __WEBPACK_IMPORTED_MODULE_4__components_RegisterProfessionalActivate_vue___default.a
+    }, {
+        path: '/professional/profile/wizard',
+        name: 'WizardProfessional',
+        component: __WEBPACK_IMPORTED_MODULE_5__components_WizardProfessional_vue___default.a
+    }, {
         path: '/search/:term?/:location?/:payment?',
         name: 'Search',
         props: true,
-        component: __WEBPACK_IMPORTED_MODULE_3__components_Search_vue___default.a
+        component: __WEBPACK_IMPORTED_MODULE_6__components_Search_vue___default.a
     }, {
         path: '/404',
         name: '404',
-        component: __WEBPACK_IMPORTED_MODULE_4__components_NotFound_vue___default.a
+        component: __WEBPACK_IMPORTED_MODULE_7__components_NotFound_vue___default.a
     }, {
         path: '/*',
         name: 'Not Found',
-        component: __WEBPACK_IMPORTED_MODULE_4__components_NotFound_vue___default.a
+        component: __WEBPACK_IMPORTED_MODULE_7__components_NotFound_vue___default.a
     }]
 }));
 
@@ -44457,7 +44479,7 @@ var Component = __webpack_require__(1)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/MaiaVinicius/Documents/dev/guiaconsulta-web/resources/assets/js/components/Home.vue"
+Component.options.__file = "C:\\Users\\Sílvio Maia\\PhpstormProjects\\guiaconsulta-web\\resources\\assets\\js\\components\\Home.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Home.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -44502,6 +44524,139 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -44514,21 +44669,173 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
+  return _c('div', [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _vm._m(3), _vm._v(" "), _c('app-footer')], 1)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "header"
+  }, [_c('div', {
+    staticClass: "container"
+  }, [_c('nav', {
+    staticClass: "navbar navbar-expand-md navbar-transparent dark bg-dark"
+  }, [_c('a', {
+    staticClass: "navbar-brand",
+    attrs: {
+      "href": "#"
+    }
+  }, [_c('img', {
+    staticClass: "mainLogo",
+    attrs: {
+      "src": "images/logo_full_white.png"
+    }
+  })]), _vm._v(" "), _c('button', {
+    staticClass: "navbar-toggler",
+    attrs: {
+      "type": "button",
+      "data-toggle": "collapse",
+      "data-target": "#navbarsExampleDefault",
+      "aria-controls": "navbarsExampleDefault",
+      "aria-expanded": "false",
+      "aria-label": "Toggle navigation"
+    }
+  }, [_c('span', {
+    staticClass: "navbar-toggler-icon"
+  }, [_c('i', {
+    staticClass: "fa fa-bars",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "collapse navbar-collapse",
+    attrs: {
+      "id": "navbarsExampleDefault"
+    }
+  }, [_c('ul', {
+    staticClass: "navbar-nav mr-auto"
+  }), _vm._v(" "), _c('form', {
+    staticClass: "form-inline my-2 my-lg-0"
+  }, [_c('button', {
+    staticClass: "btn btn-outline-warning my-2 my-sm-0",
+    attrs: {
+      "type": "submit"
+    }
+  }, [_vm._v("\n                            Profissional da saúde? Clique\n                            aqui!\n                        ")])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "jumbotron"
+  }, [_c('div', {
+    staticClass: "container"
+  }, [_c('h2', {
+    staticClass: "display-4 text-center hWhite"
+  }, [_vm._v("Procurando atendimento perto de você?")]), _vm._v(" "), _c('h5', {
+    staticClass: "text-center"
+  }, [_vm._v("Faça seu agendamento online:")]), _vm._v(" "), _c('div', {
+    staticClass: "row formHomeHolder"
+  }, [_c('div', {
+    staticClass: "col-md-3 whiteBg homeForm"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "col-md-3 whiteBg homeForm"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "col-md-3 whiteBg homeForm"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "col-md-2 homeForm"
+  }, [_c('button', {
+    staticClass: "btn btn-block btn-success btn-full",
+    attrs: {
+      "type": "submit"
+    }
+  }, [_vm._v("Buscar")])])])])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "container"
   }, [_c('div', {
+    staticClass: "row p30"
+  }, [_c('div', {
+    staticClass: "col-md-4 text-center boxed"
+  }, [_c('img', {
+    attrs: {
+      "src": "images/h1.png"
+    }
+  }), _vm._v(" "), _c('h3', {
+    staticClass: "text-center p20"
+  }, [_vm._v("Encontre um profissional")]), _vm._v(" "), _c('p', {
+    staticClass: "text-left"
+  }, [_vm._v("Escolha entre milhares de Médicos, Dentistas e Profissionais de Saúde a\n                    especialidade que você procura, sempre pertinho de você ")])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-4 text-center boxed"
+  }, [_c('img', {
+    attrs: {
+      "src": "images/h2.png"
+    }
+  }), _vm._v(" "), _c('h3', {
+    staticClass: "text-center p20"
+  }, [_vm._v("Você escolhe dia e horário")]), _vm._v(" "), _c('p', {
+    staticClass: "text-left"
+  }, [_vm._v("\n                    Todas as consultas tem hora marcada, e é você que escolhe o dia e a hora. O poder\n                    está com você! ")])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-4 text-center boxed"
+  }, [_c('img', {
+    attrs: {
+      "src": "images/h3.png"
+    }
+  }), _vm._v(" "), _c('h3', {
+    staticClass: "text-center p20"
+  }, [_vm._v("Forma de Pagamento")]), _vm._v(" "), _c('p', {
+    staticClass: "text-left"
+  }, [_vm._v("\n                    Você está no comando, então escolha o profissional pelo plano de saúde ou valor da\n                    consulta que você pode pagar. ")])])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "containder-fluid blueBg dark showApp"
+  }, [_c('div', {
+    staticClass: "container p20"
+  }, [_c('div', {
+    staticClass: "row "
+  }, [_c('div', {
+    staticClass: "col-md-5"
+  }, [_c('img', {
+    staticClass: "floating",
+    attrs: {
+      "src": "images/app.png"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-7"
+  }, [_c('h3', {
+    staticClass: "hWhite"
+  }, [_vm._v("O mesmo aplicativo apresenta a interface de busca de profissionais para o paciente, e\n                        o gerenciamento de agenda e consultas para o profissional, tornando o processo mais transparente\n                        para ambos.")]), _vm._v(" "), _c('p', [_vm._v("Você ganha mais um canal para seus pacientes te encontrarem e eles a comodidade de ótimos\n                        especialistas na ponta dos dedos.")]), _vm._v(" "), _c('div', {
     staticClass: "row"
   }, [_c('div', {
-    staticClass: "col-md-8 col-md-offset-2"
+    staticClass: "col-md-6 text-right"
+  }, [_c('img', {
+    staticClass: "dBtn",
+    attrs: {
+      "src": "images/gplay.png"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-6 text-left"
+  }, [_c('img', {
+    staticClass: "dBtn",
+    attrs: {
+      "src": "images/aplay.png"
+    }
+  })])])])])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "container p80 text-center"
   }, [_c('div', {
-    staticClass: "panel panel-default"
+    staticClass: "row"
   }, [_c('div', {
-    staticClass: "panel-heading"
-  }, [_vm._v("Example Component")]), _vm._v(" "), _c('div', {
-    staticClass: "panel-body"
-  }, [_vm._v("\n                    I'm an example component!\n                ")])])])])])
+    staticClass: "col-md-3"
+  }, [_c('img', {
+    attrs: {
+      "src": "images/sdoctor.png"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-9"
+  }, [_c('h3', {
+    staticClass: "mtop40"
+  }, [_vm._v(" Busque seu médico por localidade, proximidade, planos de saúde e especialidade, tudo\n                    isso na palma da sua mão.")]), _vm._v(" "), _c('p', {
+    staticClass: "text-left mtop40"
+  }, [_vm._v("Transformamos a forma de relacionamento entre médico e paciente, trazendo a você\n                    a facilidade que faltava e a seu medico a praticidade que ele buscava. Controle seus alarmes de\n                    medicamentos, verifique as melhores drogarias para adquirir os itens da sua receita e ainda receba dicas\n                    dos laboratórios mais perto de você que oferecem o exame que seu médico acabou de lhe prescrever. ")]), _vm._v(" "), _c('a', {
+    staticClass: "btn btn-outline-success mtop20",
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v(" É profissional da saúde? Clique aqui!")])])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -44555,7 +44862,7 @@ var Component = __webpack_require__(1)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/MaiaVinicius/Documents/dev/guiaconsulta-web/resources/assets/js/components/Search.vue"
+Component.options.__file = "C:\\Users\\Sílvio Maia\\PhpstormProjects\\guiaconsulta-web\\resources\\assets\\js\\components\\Search.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Search.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -44665,7 +44972,7 @@ var Component = __webpack_require__(1)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/MaiaVinicius/Documents/dev/guiaconsulta-web/resources/assets/js/components/NotFound.vue"
+Component.options.__file = "C:\\Users\\Sílvio Maia\\PhpstormProjects\\guiaconsulta-web\\resources\\assets\\js\\components\\NotFound.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] NotFound.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -44747,15 +45054,33 @@ if (false) {
 }
 
 /***/ }),
-/* 48 */
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(1)(
   /* script */
-  __webpack_require__(49),
+  __webpack_require__(62),
   /* template */
-  __webpack_require__(50),
+  __webpack_require__(63),
   /* styles */
   null,
   /* scopeId */
@@ -44763,9 +45088,9 @@ var Component = __webpack_require__(1)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/MaiaVinicius/Documents/dev/guiaconsulta-web/resources/assets/js/components/Example.vue"
+Component.options.__file = "C:\\Users\\Sílvio Maia\\PhpstormProjects\\guiaconsulta-web\\resources\\assets\\js\\components\\RegisterProfessional.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Example.vue: functional components are not supported with templates, they should use render functions.")}
+if (Component.options.functional) {console.error("[vue-loader] RegisterProfessional.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -44774,9 +45099,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-15c904f8", Component.options)
+    hotAPI.createRecord("data-v-3cb556c0", Component.options)
   } else {
-    hotAPI.reload("data-v-15c904f8", Component.options)
+    hotAPI.reload("data-v-3cb556c0", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -44787,11 +45112,175 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 49 */
+/* 62 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -44816,39 +45305,1629 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 50 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  return _c('div', [_c('app-header'), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('div', {
     staticClass: "container"
   }, [_c('div', {
     staticClass: "row"
   }, [_c('div', {
-    staticClass: "col-md-8 col-md-offset-2"
+    staticClass: "col-md-3 hidden-xs"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "col-md-6 col-xs-12 col-sm-6 p20"
+  }, [_c('h3', {
+    staticClass: "text-center"
+  }, [_vm._v(" Monte seu Perfil!")]), _vm._v(" "), _c('P', {
+    staticClass: "text-center"
+  }, [_vm._v("Não há custo para usar. Porque não testar?")]), _vm._v(" "), _c('div', {
+    staticClass: "bs row"
+  }, [_c('Div', {
+    staticClass: "col-md-12"
+  }, [_c('h5', {
+    staticClass: "subLine"
+  }, [_vm._v("Dados da Conta")]), _vm._v(" "), _c('div', {
+    staticClass: "btn-group btn-group-justified fancy-radio-group",
+    attrs: {
+      "data-toggle": "buttons"
+    }
+  }, [_c('label', {
+    staticClass: "btn btn-fancy-radio text-xs text-no-transform clearfix"
+  }, [_c('img', {
+    staticClass: "normal",
+    attrs: {
+      "src": "images/radio/empty.gif"
+    }
+  }), _vm._v(" "), _c('img', {
+    staticClass: "checked",
+    attrs: {
+      "src": "images/radio/cked.gif"
+    }
+  }), _vm._v(" "), _c('input', {
+    staticClass: "hidden ctype",
+    attrs: {
+      "type": "radio",
+      "name": "ctype",
+      "value": "fisico"
+    }
+  }), _vm._v(" Pessoa Física\n                            ")]), _vm._v(" "), _c('label', {
+    staticClass: "btn btn-fancy-radio text-xs text-no-transform clearfix"
+  }, [_c('img', {
+    staticClass: "normal",
+    attrs: {
+      "src": "images/radio/empty.gif"
+    }
+  }), _vm._v(" "), _c('img', {
+    staticClass: "checked",
+    attrs: {
+      "src": "images/radio/cked.gif"
+    }
+  }), _vm._v(" "), _c('input', {
+    staticClass: "hidden ctype",
+    attrs: {
+      "type": "radio",
+      "name": "ctype",
+      "value": "juridico"
+    }
+  }), _vm._v("Pessoa Jurídica\n                            ")])])]), _vm._v(" "), _c('Div', {
+    staticClass: "col-md-12"
   }, [_c('div', {
-    staticClass: "panel panel-default"
+    staticClass: "pesFisica",
+    staticStyle: {
+      "display": "block"
+    },
+    attrs: {
+      "id": "fisico"
+    }
   }, [_c('div', {
-    staticClass: "panel-heading"
-  }, [_vm._v("Example Component")]), _vm._v(" "), _c('div', {
-    staticClass: "panel-body"
-  }, [_vm._v("\n                    I'm an example component!\n                ")])])])])])
+    staticClass: "input-group  mb-sm-0 mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-user",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "Nome Completo"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "input-group mb-sm-0 mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-address-card",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "CPF"
+    }
+  })])])]), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _vm._m(3), _vm._v(" "), _vm._m(4), _vm._v(" "), _vm._m(5), _vm._v(" "), _vm._m(6), _vm._v(" "), _vm._m(7), _vm._v(" "), _vm._m(8), _vm._v(" "), _vm._m(9), _vm._v(" "), _vm._m(10), _vm._v(" "), _vm._m(11), _vm._v(" "), _vm._m(12), _vm._v(" "), _vm._m(13), _vm._v(" "), _vm._m(14), _vm._v(" "), _vm._m(15), _vm._v(" "), _vm._m(16)], 1)], 1)])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('app-footer')], 1)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "container-fluid greyBg"
+  }, [_c('div', {
+    staticClass: "row p20 text-center"
+  }, [_c('div', {
+    staticClass: "col-md-12"
+  }, [_c('h3', [_vm._v(" Adquira mais pacientes para sua clínica ou consultório")])])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-12"
+  }, [_c('h5', {
+    staticClass: "subLine mtop20"
+  }, [_vm._v("Dados do Consultório")]), _vm._v(" "), _c('span', {
+    staticClass: "legenda"
+  }, [_vm._v("* Nessa etapa de cadastro, é necessário informar o endereço de apenas um dos seus consultórios.")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-6"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-tag",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "CEP"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-12"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-map-marker",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "Endereço"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-5"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-map-marker",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "Número"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-7"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-map-marker",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "Complemento"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-12"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-map-marker",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "Bairro"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-7"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-map-marker",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "Cidade"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-5"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-map-marker",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "Estado"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-4"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-phone",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "DDD"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-8"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-phone",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "Telefone do Consultório"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-12 mtop20"
+  }, [_c('h5', {
+    staticClass: "subLine"
+  }, [_vm._v("Acesso do Adminsitrador")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-12"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-envelope",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "E-mail"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-12"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-envelope",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "password",
+      "placeholder": "Senha"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-4"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-phone",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "DDD"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-8"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-phone",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "Telefone do Administrador"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-12 p30 text-right"
+  }, [_c('button', {
+    staticClass: "btn btn-success"
+  }, [_vm._v("Continuar")])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-15c904f8", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-3cb556c0", module.exports)
   }
 }
 
 /***/ }),
-/* 51 */
-/***/ (function(module, exports) {
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+var disposed = false
+var Component = __webpack_require__(1)(
+  /* script */
+  __webpack_require__(65),
+  /* template */
+  __webpack_require__(66),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "C:\\Users\\Sílvio Maia\\PhpstormProjects\\guiaconsulta-web\\resources\\assets\\js\\components\\RegisterProfessionalActivate.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] RegisterProfessionalActivate.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-fa1fb35a", Component.options)
+  } else {
+    hotAPI.reload("data-v-fa1fb35a", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 65 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    mounted: function mounted() {
+        console.log('Component mounted.');
+    }
+});
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('app-header'), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-md-3 hidden-xs"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "col-md-6 col-xs-12 col-sm-6 p20"
+  }, [_c('h3', {
+    staticClass: "text-center"
+  }, [_vm._v(" Acabamos de enviar um e-mail para você")]), _vm._v(" "), _c('P', {
+    staticClass: "text-center p20"
+  }, [_vm._v("ATENÇÃO: Se o e-mail não estiver na sua caixa de entrada, procure na caixa de\n                    Spam ou Lixo eletrônico.")])], 1)])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('app-footer')], 1)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "container-fluid greyBg"
+  }, [_c('div', {
+    staticClass: "row p20 text-center"
+  }, [_c('div', {
+    staticClass: "col-md-12"
+  }, [_c('h3', [_vm._v("Bem vindo! Só falta acessar o seu e-mail e ativar sua conta")])])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-fa1fb35a", module.exports)
+  }
+}
+
+/***/ }),
+/* 67 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var Component = __webpack_require__(1)(
+  /* script */
+  __webpack_require__(68),
+  /* template */
+  __webpack_require__(69),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "C:\\Users\\Sílvio Maia\\PhpstormProjects\\guiaconsulta-web\\resources\\assets\\js\\components\\WizardProfessional.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] WizardProfessional.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-401c15f0", Component.options)
+  } else {
+    hotAPI.reload("data-v-401c15f0", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 68 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    mounted: function mounted() {
+        console.log('Component mounted.');
+    }
+});
+
+/***/ }),
+/* 69 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('app-header'), _vm._v(" "), _vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('hr'), _vm._v(" "), _c('app-footer')], 1)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "container-fluid greyBg"
+  }, [_c('div', {
+    staticClass: "row p20 text-center"
+  }, [_c('div', {
+    staticClass: "col-md-12"
+  }, [_c('h3', [_vm._v("Cadastro de Profissional")])])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-md-12 col-xs-12 col-sm-12 mtop20"
+  }, [_c('div', {
+    staticClass: "alert alert-warning",
+    attrs: {
+      "role": "alert"
+    }
+  }, [_vm._v("\n                    As informações serão auditadas e estão sujeitas a revisão\n                ")])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-12 wizard"
+  }, [_c('ul', {
+    staticClass: "nav nav-pills nav-justified thumbnail setup-panel"
+  }, [_c('li', {
+    staticClass: "active"
+  }, [_c('a', {
+    attrs: {
+      "href": "#step-1"
+    }
+  }, [_c('h4', {
+    staticClass: "list-group-item-heading"
+  }, [_c('button', {
+    staticClass: "btn btn-circle btn-info"
+  }, [_vm._v("1")])]), _vm._v(" "), _c('p', {
+    staticClass: "list-group-item-text hidden-xs"
+  }, [_vm._v(" Dados do perfil")])])]), _vm._v(" "), _c('li', {
+    staticClass: "disabled"
+  }, [_c('a', {
+    attrs: {
+      "href": "#step-2"
+    }
+  }, [_c('h4', {
+    staticClass: "list-group-item-heading"
+  }, [_c('button', {
+    staticClass: "btn btn-circle btn-info"
+  }, [_vm._v("2")])]), _vm._v(" "), _c('p', {
+    staticClass: "list-group-item-text  hidden-xs"
+  }, [_vm._v("Foto")])])]), _vm._v(" "), _c('li', {
+    staticClass: "disabled"
+  }, [_c('a', {
+    attrs: {
+      "href": "#step-3"
+    }
+  }, [_c('h4', {
+    staticClass: "list-group-item-heading"
+  }, [_c('button', {
+    staticClass: "btn btn-circle btn-info"
+  }, [_vm._v("3")])]), _vm._v(" "), _c('p', {
+    staticClass: "list-group-item-text   hidden-xs"
+  }, [_vm._v("Especialidades")])])]), _vm._v(" "), _c('li', {
+    staticClass: "disabled"
+  }, [_c('a', {
+    attrs: {
+      "href": "#step-4"
+    }
+  }, [_c('h4', {
+    staticClass: "list-group-item-heading"
+  }, [_c('button', {
+    staticClass: "btn btn-circle btn-info"
+  }, [_vm._v("4")])]), _vm._v(" "), _c('p', {
+    staticClass: "list-group-item-text  hidden-xs"
+  }, [_vm._v("Consultórios")])])]), _vm._v(" "), _c('li', {
+    staticClass: "disabled"
+  }, [_c('a', {
+    attrs: {
+      "href": "#step-5"
+    }
+  }, [_c('h4', {
+    staticClass: "list-group-item-heading"
+  }, [_c('button', {
+    staticClass: "btn btn-circle btn-info"
+  }, [_vm._v("5")])]), _vm._v(" "), _c('p', {
+    staticClass: "list-group-item-text   hidden-xs"
+  }, [_vm._v("Preços e convênios")])])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-xs-12 col-md-12  stepsHolder"
+  }, [_c('div', {
+    staticClass: "col-md-12 well setup-content text-center",
+    attrs: {
+      "id": "step-1"
+    }
+  }, [_c('div', {
+    staticClass: "row p20  text-left"
+  }, [_c('div', {
+    staticClass: "col-md-4 col-sm-12 mtop20"
+  }, [_c('label', {
+    attrs: {
+      "for": ""
+    }
+  }, [_vm._v("Selecione o Conselho")]), _vm._v(" "), _c('select', {
+    staticClass: "form-control",
+    attrs: {
+      "name": "conselho"
+    }
+  }, [_c('option', [_vm._v("Selecione o Conselho")]), _vm._v(" "), _c('option', [_vm._v("CRM")]), _vm._v(" "), _c('option', [_vm._v("CRO")]), _vm._v(" "), _c('option', [_vm._v("CREFITO")])])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-3 col-sm-12 mtop20"
+  }, [_c('label', {
+    attrs: {
+      "for": ""
+    }
+  }, [_vm._v("Selecione Estado do Conselho")]), _vm._v(" "), _c('select', {
+    staticClass: "form-control",
+    attrs: {
+      "name": "conselho"
+    }
+  }, [_c('option', [_vm._v("Selecione o Conselho")]), _vm._v(" "), _c('option', [_vm._v("RJ")]), _vm._v(" "), _c('option', [_vm._v("SP")]), _vm._v(" "), _c('option', [_vm._v("MG")])])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-2 col-sm-12 mtop20"
+  }, [_c('label', {
+    attrs: {
+      "for": ""
+    }
+  }, [_vm._v("Número do Conselho")]), _vm._v(" "), _c('div', {
+    staticClass: "input-group "
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-address-card",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "Número do Conselho"
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-3 col-sm-12 mtop20"
+  }, [_c('label', {
+    attrs: {
+      "for": ""
+    }
+  }, [_vm._v("CPF")]), _vm._v(" "), _c('div', {
+    staticClass: "input-group "
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-id-card-o",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "CPF"
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-6 col-sm-12 mtop20"
+  }, [_c('label', {
+    attrs: {
+      "for": ""
+    }
+  }, [_vm._v("Nome Completo do Profissional")]), _vm._v(" "), _c('div', {
+    staticClass: "input-group "
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-user",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "Nome do Profissional"
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-12 col-sm-12 mtop20"
+  }, [_c('div', {
+    staticClass: "form-group"
+  }, [_c('label', {
+    attrs: {
+      "for": "exampleFormControlTextarea1"
+    }
+  }, [_vm._v("Apresentação profissional")]), _vm._v(" "), _c('textarea', {
+    staticClass: "form-control",
+    attrs: {
+      "rows": "6"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "legenda"
+  }, [_vm._v("Máximo de 500 caracteres.")])])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-12 col-sm-12 mtop20"
+  }, [_c('div', {
+    staticClass: "form-group"
+  }, [_c('label', {
+    attrs: {
+      "for": "exampleFormControlTextarea1"
+    }
+  }, [_vm._v("Formação acadêmica (graduação, pós graduação,\n                                    residência)")]), _vm._v(" "), _c('textarea', {
+    staticClass: "form-control",
+    attrs: {
+      "id": "exampleFormControlTextarea1",
+      "rows": "6"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "legenda"
+  }, [_vm._v("Máximo de 500 caracteres.")])])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-6 text-left"
+  }, [_c('button', {
+    staticClass: "btn btn-outline-secondary",
+    attrs: {
+      "id": "#"
+    }
+  }, [_c('i', {
+    staticClass: "fa fa-arrow-left",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  }), _vm._v(" Voltar\n                            ")]), _vm._v(" "), _c('button', {
+    staticClass: "btn btn-primary colorBase ",
+    attrs: {
+      "id": "activate-step-2"
+    }
+  }, [_vm._v("Continuar "), _c('i', {
+    staticClass: "fa fa-arrow-right",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-6 text-right"
+  })])])])]), _vm._v(" "), _c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-xs-12  col-md-12  stepsHolder"
+  }, [_c('div', {
+    staticClass: "col-md-12 well setup-content",
+    attrs: {
+      "id": "step-2"
+    }
+  }, [_c('div', {
+    staticClass: "col-md-12"
+  }, [_c('div', {
+    staticClass: "box text-center"
+  }, [_c('input', {
+    staticClass: "inputfile",
+    attrs: {
+      "type": "file",
+      "name": "avatarMedico",
+      "id": "avatarMedico",
+      "data-multiple-caption": "{count} files selected"
+    }
+  }), _vm._v(" "), _c('label', {
+    staticClass: "inputfileLabel",
+    attrs: {
+      "for": "avatarMedico"
+    }
+  }, [_c('i', {
+    staticClass: "fa fa-cloud-upload",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  }), _vm._v(" "), _c('span', {
+    staticClass: "btn btn-outline-info"
+  }, [_vm._v("Escolha uma foto")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-6 text-left"
+  }, [_c('button', {
+    staticClass: "btn btn-outline-secondary",
+    attrs: {
+      "id": ""
+    }
+  }, [_c('i', {
+    staticClass: "fa fa-arrow-left",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  }), _vm._v("\n                            Voltar\n                        ")]), _vm._v(" "), _c('button', {
+    staticClass: "btn btn-primary colorBase ",
+    attrs: {
+      "id": "activate-step-3"
+    }
+  }, [_vm._v("Continuar "), _c('i', {
+    staticClass: "fa fa-arrow-right",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-6 text-right"
+  })])])]), _vm._v(" "), _c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-xs-12  col-md-12  stepsHolder"
+  }, [_c('div', {
+    staticClass: "col-md-12 well setup-content",
+    attrs: {
+      "id": "step-3"
+    }
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-md-6"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "col-md-6 text-right"
+  }, [_c('button', {
+    staticClass: "btn btn-info colorBase"
+  }, [_vm._v(" Adicionar Especialidade")])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-6"
+  }, [_c('label', [_vm._v("Selecione a Especialidade")]), _vm._v(" "), _c('select', {
+    staticClass: "form-control",
+    attrs: {
+      "name": "conselho"
+    }
+  }, [_c('option', [_vm._v("Escolha uma especialidade")]), _vm._v(" "), _c('option', [_vm._v("Médico - Acupuntura")]), _vm._v(" "), _c('option', [_vm._v("Médico - Cardiologia")]), _vm._v(" "), _c('option', [_vm._v("Médico - Dermatologia")])])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-6"
+  }, [_c('label', [_vm._v("RQE")]), _vm._v(" "), _c('div', {
+    staticClass: "input-group "
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_vm._v(" RQE")]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "Nome do Profissional"
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-12"
+  }, [_c('h4', {
+    staticClass: "mtop20 bb1"
+  }, [_vm._v("Área de Atuação")]), _vm._v(" "), _c('div', {
+    staticClass: "row bb1"
+  }, [_c('div', {
+    staticClass: "col-md-1 "
+  }, [_c('div', {
+    staticClass: "form-check"
+  }, [_c('label', {
+    staticClass: "form-check-label"
+  }, [_c('input', {
+    staticClass: "form-check-input",
+    attrs: {
+      "type": "checkbox"
+    }
+  })])])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-6 espname"
+  }, [_vm._v(" Nome subsespecialidade")]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-5"
+  }, [_c('div', {
+    staticClass: "input-group "
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_vm._v(" RQE")]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "Nome do Profissional"
+    }
+  })])])]), _vm._v(" "), _c('div', {
+    staticClass: "row bb1"
+  }, [_c('div', {
+    staticClass: "col-md-1 "
+  }, [_c('div', {
+    staticClass: "form-check"
+  }, [_c('label', {
+    staticClass: "form-check-label"
+  }, [_c('input', {
+    staticClass: "form-check-input",
+    attrs: {
+      "type": "checkbox"
+    }
+  })])])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-6 espname"
+  }, [_vm._v(" Nome subsespecialidade")]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-5"
+  }, [_c('div', {
+    staticClass: "input-group "
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_vm._v(" RQE")]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "Nome do Profissional"
+    }
+  })])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-6 mtop20 text-left"
+  }, [_c('button', {
+    staticClass: "btn btn-outline-secondary"
+  }, [_c('i', {
+    staticClass: "fa fa-arrow-left",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  }), _vm._v("\n                            Voltar\n                        ")]), _vm._v(" "), _c('button', {
+    staticClass: "btn btn-primary colorBase ",
+    attrs: {
+      "id": "activate-step-4"
+    }
+  }, [_vm._v("Continuar "), _c('i', {
+    staticClass: "fa fa-arrow-right",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-6 mtop20 text-right"
+  })])])]), _vm._v(" "), _c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-xs-12  col-md-12  stepsHolder"
+  }, [_c('div', {
+    staticClass: "col-md-12 well setup-content",
+    attrs: {
+      "id": "step-4"
+    }
+  }, [_c('h1', {
+    staticClass: "text-center"
+  }, [_vm._v(" 4")])])])]), _vm._v(" "), _c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-xs-12  col-md-12 stepsHolder"
+  }, [_c('div', {
+    staticClass: "col-md-12 well setup-content",
+    attrs: {
+      "id": "step-5"
+    }
+  }, [_c('h1', {
+    staticClass: "text-center"
+  }, [_vm._v(" 5")])])])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-401c15f0", module.exports)
+  }
+}
+
+/***/ }),
+/* 70 */,
+/* 71 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var Component = __webpack_require__(1)(
+  /* script */
+  null,
+  /* template */
+  __webpack_require__(73),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "C:\\Users\\Sílvio Maia\\PhpstormProjects\\guiaconsulta-web\\resources\\assets\\js\\components\\Footer.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Footer.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-36f5cbf1", Component.options)
+  } else {
+    hotAPI.reload("data-v-36f5cbf1", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 72 */,
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-md-4"
+  }, [_c('h3', [_vm._v("Cidades")]), _vm._v(" "), _c('ul', [_c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Rio de Janeiro")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("São Paulo")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Belo Horizonte")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Salvador")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Vitória")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Brasília")])], 1)])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-4"
+  }, [_c('h3', [_vm._v("Especialidades")]), _vm._v(" "), _c('ul', [_c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Ginecologista")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Dermatologista")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Ortopedista")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Oftalmologista")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Clínico Geral")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Cardiologista")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Dentista")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Nutricionista")])], 1)])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-4"
+  }, [_c('h3', [_vm._v("Sobre Nós")]), _vm._v(" "), _c('ul', [_c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v(" O que é")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Dúvidas")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Termos de uso")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Política de privacidade")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Entre em contato")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Doutor Já para empresas")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Quer trabalhar conosco?")])], 1)])])])]), _vm._v(" "), _vm._m(0)])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "container-flui mtop20 blueBg dark"
+  }, [_c('div', {
+    staticClass: "container"
+  }, [_c('p', [_vm._v("© Company 2017")])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-36f5cbf1", module.exports)
+  }
+}
+
+/***/ }),
+/* 74 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var Component = __webpack_require__(1)(
+  /* script */
+  null,
+  /* template */
+  __webpack_require__(75),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "C:\\Users\\Sílvio Maia\\PhpstormProjects\\guiaconsulta-web\\resources\\assets\\js\\components\\Header.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Header.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-58282fe3", Component.options)
+  } else {
+    hotAPI.reload("data-v-58282fe3", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 75 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('div', {
+    staticClass: "header header-blue"
+  }, [_c('div', {
+    staticClass: "container-fluid"
+  }, [_c('nav', {
+    staticClass: "navbar navbar-expand-md navbar-transparent dark bg-dark"
+  }, [_c('a', {
+    staticClass: "navbar-brand",
+    attrs: {
+      "href": "#"
+    }
+  }, [_c('img', {
+    staticClass: "mainLogo",
+    attrs: {
+      "src": "images/logo_full_white.png"
+    }
+  })]), _vm._v(" "), _c('button', {
+    staticClass: "navbar-toggler",
+    attrs: {
+      "type": "button",
+      "data-toggle": "collapse",
+      "data-target": "#navbarsExampleDefault",
+      "aria-controls": "navbarsExampleDefault",
+      "aria-expanded": "false",
+      "aria-label": "Toggle navigation"
+    }
+  }, [_c('span', {
+    staticClass: "navbar-toggler-icon dark"
+  }, [_c('i', {
+    staticClass: "fa fa-bars",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "collapse navbar-collapse ",
+    attrs: {
+      "id": "navbarsExampleDefault"
+    }
+  }, [_c('ul', {
+    staticClass: "navbar-nav ml-auto "
+  }, [_c('li', {
+    staticClass: "nav-item active"
+  }, [_c('a', {
+    staticClass: "nav-link",
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Baixe Nosso App!")])]), _vm._v(" "), _c('li', {
+    staticClass: "nav-item"
+  }, [_c('a', {
+    staticClass: "nav-link",
+    attrs: {
+      "href": "#",
+      "data-toggle": "modal",
+      "data-target": "#cadastroModal"
+    }
+  }, [_vm._v("Cadastrar\n                                Consultório")])]), _vm._v(" "), _c('li', {
+    staticClass: "nav-item"
+  }, [_c('a', {
+    staticClass: "nav-link",
+    attrs: {
+      "href": "#",
+      "data-toggle": "modal",
+      "data-target": "#loginModal"
+    }
+  }, [_vm._v("Entrar")])])])])])])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-58282fe3", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

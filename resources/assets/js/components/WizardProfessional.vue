@@ -1,278 +1,329 @@
 <template>
     <div>
-        <div class="header header-blue">
-            <div class="container-fluid">
-
-                <nav class="navbar navbar-expand-md navbar-transparent dark bg-dark">
-                    <a class="navbar-brand" href="#"><img src="images/logo_full_white.png" class="mainLogo"></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarsExampleDefault"
-                            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon dark"><i class="fa fa-bars" aria-hidden="true"></i></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse " id="navbarsExampleDefault">
-                        <ul class="navbar-nav ml-auto ">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Baixe Nosso App!</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="modal" data-target="#cadastroModal">Cadastrar
-                                    Consultório</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Entrar</a>
-                            </li>
-                            <!--  <li class="nav-item">
-                                <a class="nav-link disabled" href="#">Disabled</a>
-                              </li>
-                              <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                                <div class="dropdown-menu" aria-labelledby="dropdown01">
-                                  <a class="dropdown-item" href="#">Action</a>
-                                  <a class="dropdown-item" href="#">Another action</a>
-                                  <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                              </li>-->
-                        </ul>
-
-                    </div>
-                </nav>
-            </div>
-
-
-        </div>
+        <app-header></app-header>
 
         <div class="container-fluid greyBg">
             <div class="row p20 text-center">
                 <div class="col-md-12">
-                    <h3> Adquira mais pacientes para sua clínica ou consultório</h3>
+                    <h3>Cadastro de Profissional</h3>
+
                 </div>
             </div>
         </div>
-
         <div class="container">
 
             <div class="row">
-                <div class="col-md-3 hidden-xs">
+
+
+                <div class="col-md-12 col-xs-12 col-sm-12 mtop20">
+                    <div class="alert alert-warning" role="alert">
+                        As informações serão auditadas e estão sujeitas a revisão
+                    </div>
 
                 </div>
 
-                <div class="col-md-6 col-xs-12 col-sm-6 p20">
+                <div class="col-md-12 wizard">
+                    <ul class="nav nav-pills nav-justified thumbnail setup-panel">
+                        <li class="active"><a href="#step-1">
+                            <h4 class="list-group-item-heading">
+                                <button class="btn btn-circle btn-info">1</button>
+                            </h4>
+                            <p class="list-group-item-text hidden-xs"> Dados do perfil</p>
+                        </a></li>
+                        <li class="disabled"><a href="#step-2">
+                            <h4 class="list-group-item-heading">
+                                <button class="btn btn-circle btn-info">2</button>
+                            </h4>
+                            <p class="list-group-item-text  hidden-xs">Foto</p>
+                        </a></li>
+                        <li class="disabled"><a href="#step-3">
+                            <h4 class="list-group-item-heading">
+                                <button class="btn btn-circle btn-info">3</button>
+                            </h4>
+                            <p class="list-group-item-text   hidden-xs">Especialidades</p>
+                        </a></li>
 
-                    <h3 class="text-center"> Monte seu Perfil!</h3>
+                        <li class="disabled"><a href="#step-4">
+                            <h4 class="list-group-item-heading">
+                                <button class="btn btn-circle btn-info">4</button>
+                            </h4>
+                            <p class="list-group-item-text  hidden-xs">Consultórios</p>
+                        </a></li>
+                        <li class="disabled"><a href="#step-5">
+                            <h4 class="list-group-item-heading">
+                                <button class="btn btn-circle btn-info">5</button>
+                            </h4>
+                            <p class="list-group-item-text   hidden-xs">Preços e convênios</p>
+                        </a></li>
 
-                    <P class="text-center">Não há custo para usar. Porque não testar?</P>
-                    <!-- inicio form de cdastro de clinica ou profissional -->
-                    <div class="bs row">
-
-
-                        <Div class="col-md-12"><h5 class="subLine">Dados da Conta</h5>
-                            <div data-toggle="buttons" class="btn-group btn-group-justified fancy-radio-group">
-                                <label class="btn btn-fancy-radio text-xs text-no-transform clearfix"> <img
-                                        src="images/radio/empty.gif" class="normal"/> <img src="images/radio/cked.gif"
-                                                                                           class="checked"/>
-                                    <input type="radio" class="hidden ctype" name="ctype" value="fisico"> Pessoa Física
-                                </label>
-                                <label class="btn btn-fancy-radio text-xs text-no-transform clearfix"> <img
-                                        src="images/radio/empty.gif" class="normal"/> <img src="images/radio/cked.gif"
-                                                                                           class="checked"/>
-                                    <input type="radio" class="hidden ctype" name="ctype" value="juridico">Pessoa Jurídica
-                                </label>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-12  stepsHolder">
+                    <div class="col-md-12 well setup-content text-center" id="step-1">
+                        <!-- <h1> Passo 1</h1>-->
+                        <div class="row p20  text-left">
+                            <div class="col-md-4 col-sm-12 mtop20">
+                                <label for="">Selecione o Conselho</label>
+                                <select class="form-control" name="conselho">
+                                    <option>Selecione o Conselho</option>
+                                    <option>CRM</option>
+                                    <option>CRO</option>
+                                    <option>CREFITO</option>
+                                </select>
 
                             </div>
-                        </Div>
-                        <Div class="col-md-12">
-                            <div class="pesFisica" style="display:block" id="fisico">
 
-                                <div class="input-group  mb-sm-0 mtop20">
+                            <div class="col-md-3 col-sm-12 mtop20">
+
+                                <label for="">Selecione Estado do Conselho</label>
+                                <select class="form-control" name="conselho">
+                                    <option>Selecione o Conselho</option>
+                                    <option>RJ</option>
+                                    <option>SP</option>
+                                    <option>MG</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2 col-sm-12 mtop20">
+
+                                <label for="">Número do Conselho</label>
+                                <div class="input-group ">
+                                    <div class="input-group-addon"><i class="fa fa-address-card" aria-hidden="true"></i>
+                                    </div>
+                                    <input type="text" class="form-control"
+                                           placeholder="Número do Conselho">
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-3 col-sm-12 mtop20">
+
+                                <label for="">CPF</label>
+                                <div class="input-group ">
+                                    <div class="input-group-addon"><i class="fa fa-id-card-o" aria-hidden="true"></i>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="CPF">
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6 col-sm-12 mtop20">
+
+                                <label for="">Nome Completo do Profissional</label>
+                                <div class="input-group ">
                                     <div class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></div>
                                     <input type="text" class="form-control"
-                                           placeholder="Nome Completo">
+                                           placeholder="Nome do Profissional">
                                 </div>
 
-                                <div class="input-group mb-sm-0 mtop20">
-                                    <div class="input-group-addon"><i class="fa fa-address-card" aria-hidden="true"></i></div>
-                                    <input type="text" class="form-control"  placeholder="CPF">
+                            </div>
+
+                            <div class="col-md-12 col-sm-12 mtop20">
+
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Apresentação profissional</label>
+                                    <textarea class="form-control" rows="6"></textarea>
+                                    <span class="legenda">Máximo de 500 caracteres.</span>
                                 </div>
+
                             </div>
-                        </Div>
+
+                            <div class="col-md-12 col-sm-12 mtop20">
+
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Formação acadêmica (graduação, pós graduação,
+                                        residência)</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+                                    <span class="legenda">Máximo de 500 caracteres.</span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-6 text-left">
+                                <button id="#" class="btn btn-outline-secondary"><i class="fa fa-arrow-left"
+                                                                                    aria-hidden="true"></i> Voltar
+                                </button>
+                                <button id="activate-step-2" class="btn btn-primary colorBase ">Continuar <i
+                                        class="fa fa-arrow-right" aria-hidden="true"></i></button>
+
+                            </div>
+
+                            <div class="col-md-6 text-right">
+
+                                <!--   <button id="activate-step-2" class="btn btn-primary btn-lg">Próximo</button>-->
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12  col-md-12  stepsHolder">
+                    <div class="col-md-12 well setup-content" id="step-2">
 
                         <div class="col-md-12">
-                            <h5 class="subLine mtop20">Dados do Consultório</h5>
-                            <span class="legenda">* Nessa etapa de cadastro, é necessário informar o endereço de apenas um dos seus consultórios.</span>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="input-group  mtop20">
-                                <div class="input-group-addon"><i class="fa fa-tag" aria-hidden="true"></i></div>
-                                <input type="text" class="form-control"  placeholder="CEP">
-                            </div>
-                        </div>
 
-
-                        <div class="col-md-12">
-                            <div class="input-group  mtop20">
-                                <div class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-                                <input type="text" class="form-control"  placeholder="Endereço">
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-5">
-                            <div class="input-group  mtop20">
-                                <div class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-                                <input type="text" class="form-control"  placeholder="Número">
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-7">
-                            <div class="input-group  mtop20">
-                                <div class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-                                <input type="text" class="form-control"  placeholder="Complemento">
-                            </div>
-                        </div>
-
-                        <div class="col-md-12">
-                            <div class="input-group  mtop20">
-                                <div class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-                                <input type="text" class="form-control"  placeholder="Bairro">
-                            </div>
-                        </div>
-
-                        <div class="col-md-7">
-                            <div class="input-group  mtop20">
-                                <div class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-                                <input type="text" class="form-control"  placeholder="Cidade">
-                            </div>
-                        </div>
-
-                        <div class="col-md-5">
-                            <div class="input-group  mtop20">
-                                <div class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-                                <input type="text" class="form-control"  placeholder="Estado">
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-4">
-                            <div class="input-group  mtop20">
-                                <div class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></div>
-                                <input type="text" class="form-control"  placeholder="DDD">
-                            </div>
-                        </div>
-
-                        <div class="col-md-8">
-                            <div class="input-group  mtop20">
-                                <div class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></div>
-                                <input type="text" class="form-control"
-                                       placeholder="Telefone do Consultório">
-                            </div>
-                        </div>
-
-                        <div class="col-md-12 mtop20">
-
-                            <h5 class="subLine">Acesso do Adminsitrador</h5>
-                        </div>
-
-
-                        <div class="col-md-12">
-                            <div class="input-group  mtop20">
-                                <div class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
-                                <input type="text" class="form-control"  placeholder="E-mail">
+                            <div class="box text-center">
+                                <input type="file" name="avatarMedico" id="avatarMedico" class="inputfile"
+                                       data-multiple-caption="{count} files selected"/>
+                                <label for="avatarMedico" class="inputfileLabel"><i class="fa fa-cloud-upload"
+                                                                                    aria-hidden="true"></i> <span
+                                        class="btn btn-outline-info">Escolha uma foto</span></label>
                             </div>
 
                         </div>
-                        <div class="col-md-12">
-                            <div class="input-group  mtop20">
-                                <div class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
-                                <input type="password" class="form-control"  placeholder="Senha">
-                            </div>
+                        <div class="col-md-6 text-left">
+                            <button id="" class="btn btn-outline-secondary"><i class="fa fa-arrow-left"
+                                                                               aria-hidden="true"></i>
+                                Voltar
+                            </button>
+                            <button id="activate-step-3" class="btn btn-primary colorBase ">Continuar <i
+                                    class="fa fa-arrow-right" aria-hidden="true"></i></button>
 
                         </div>
-                        <div class="col-md-4">
-                            <div class="input-group  mtop20">
-                                <div class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></div>
-                                <input type="text" class="form-control"  placeholder="DDD">
-                            </div>
-                        </div>
 
-                        <div class="col-md-8">
-                            <div class="input-group  mtop20">
-                                <div class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></div>
-                                <input type="text" class="form-control"
-                                       placeholder="Telefone do Administrador">
-                            </div>
+                        <div class="col-md-6 text-right">
+
+                            <!--   <button id="activate-step-2" class="btn btn-primary btn-lg">Próximo</button>-->
+
                         </div>
 
 
-                        <div class="col-md-12 p30 text-right">
-
-                            <button class="btn btn-success">Continuar</button>
-                        </div>
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-xs-12  col-md-12  stepsHolder">
+                    <div class="col-md-12 well setup-content" id="step-3">
+
+                        <div class="row">
+                            <div class="col-md-6">
+
+
+                            </div>
+
+                            <div class="col-md-6 text-right">
+                                <button class="btn btn-info colorBase"> Adicionar Especialidade</button>
+
+                            </div>
+                            <div class="col-md-6">
+                                <label>Selecione a Especialidade</label>
+                                <select class="form-control" name="conselho">
+                                    <option>Escolha uma especialidade</option>
+                                    <option>Médico - Acupuntura</option>
+                                    <option>Médico - Cardiologia</option>
+                                    <option>Médico - Dermatologia</option>
+                                </select>
+
+
+                            </div>
+
+                            <div class="col-md-6">
+                                <label>RQE</label>
+                                <div class="input-group ">
+                                    <div class="input-group-addon"> RQE</div>
+                                    <input type="text" class="form-control"
+                                           placeholder="Nome do Profissional">
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-12">
+                                <h4 class="mtop20 bb1">Área de Atuação</h4>
+                                <div class="row bb1">
+                                    <div class="col-md-1 ">
+
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input">
+
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 espname"> Nome subsespecialidade</div>
+                                    <div class="col-md-5">
+                                        <div class="input-group ">
+                                            <div class="input-group-addon"> RQE</div>
+                                            <input type="text" class="form-control"
+                                                   placeholder="Nome do Profissional">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row bb1">
+                                    <div class="col-md-1 ">
+
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input">
+
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 espname"> Nome subsespecialidade</div>
+                                    <div class="col-md-5">
+                                        <div class="input-group ">
+                                            <div class="input-group-addon"> RQE</div>
+                                            <input type="text" class="form-control"
+                                                   placeholder="Nome do Profissional">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-md-6 mtop20 text-left">
+                            <button class="btn btn-outline-secondary"><i class="fa fa-arrow-left"
+                                                                         aria-hidden="true"></i>
+                                Voltar
+                            </button>
+                            <button id="activate-step-4" class="btn btn-primary colorBase ">Continuar <i
+                                    class="fa fa-arrow-right" aria-hidden="true"></i></button>
+
+                        </div>
+
+                        <div class="col-md-6 mtop20 text-right">
+
+                            <!--   <button id="activate-step-2" class="btn btn-primary btn-lg">Próximo</button>-->
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12  col-md-12  stepsHolder">
+                    <div class="col-md-12 well setup-content" id="step-4">
+                        <h1 class="text-center"> 4</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12  col-md-12 stepsHolder">
+                    <div class="col-md-12 well setup-content" id="step-5">
+                        <h1 class="text-center"> 5</h1>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
+
+
         <hr>
-        <footer>
 
-            <div class="container">
-                <div class="row">
+        <app-footer></app-footer>
 
-                    <div class="col-md-4">
-                        <h3>Cidades</h3>
-                        <ul>
-
-                            <li><A href="#">Rio de Janeiro</A></li>
-                            <li><A href="#">São Paulo</A></li>
-                            <li><A href="#">Belo Horizonte</A></li>
-                            <li><A href="#">Salvador</A></li>
-
-                            <li><A href="#">Vitória</A></li>
-
-                            <li><A href="#">Brasília</A></li>
-
-
-                        </ul>
-
-                    </div>
-                    <div class="col-md-4">
-                        <h3>Especialidades</h3>
-
-                        <ul>
-                            <li><A href="#">Ginecologista</A></li>
-                            <li><A href="#">Dermatologista</A></li>
-                            <li><A href="#">Ortopedista</A></li>
-                            <li><A href="#">Oftalmologista</A></li>
-                            <li><A href="#">Clínico Geral</A></li>
-                            <li><A href="#">Cardiologista</A></li>
-                            <li><A href="#">Dentista</A></li>
-                            <li><A href="#">Nutricionista</A></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>Sobre Nós</h3>
-                        <ul>
-                            <li><A href="#"> O que é</A></li>
-                            <li><A href="#">Dúvidas</A></li>
-                            <li><A href="#">Termos de uso</A></li>
-                            <li><A href="#">Política de privacidade</A></li>
-                            <li><A href="#">Entre em contato</A></li>
-                            <li><A href="#">Doutor Já para empresas</A></li>
-                            <li><A href="#">Quer trabalhar conosco?</A></li>
-
-                        </ul>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="container-flui mtop20 blueBg dark">
-                <div class="container"><p>&copy; Company 2017</p></div>
-
-            </div>
-        </footer>
     </div>
 </template>
 
