@@ -18,8 +18,8 @@ Route::group( [ 'middleware' => 'web' ], function () {
 	} );
 
 
-	Route::get( '/{catchall?}', function ( $catchall ) {
-		return response()->redirectTo( '/#/' . $catchall );
-	} )->where( 'catchall', '(.*)' );
+    if ( ! request()->ajax() ) {
+        Route::get('{vue?}', 'WebController@index')->where('vue', '[\/\w\.-]*');
+    }
 
 } );

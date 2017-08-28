@@ -4,7 +4,7 @@
             <div class="container">
 
                 <nav class="navbar navbar-expand-md navbar-transparent dark bg-dark">
-                    <a class="navbar-brand" href="#"><img src="images/logo_full_white.png" class="mainLogo"></a>
+                    <a class="navbar-brand" href="#"><img src="/images/logo_full_white.png" class="mainLogo"></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarsExampleDefault"
                             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +33,7 @@
                         </ul>
                         <form class="form-inline my-2 my-lg-0">
 
-                            <a class="btn btn-outline-warning my-2 my-sm-0" href="#/register/professional">
+                            <a class="btn btn-outline-warning my-2 my-sm-0" href="/register/professional">
                                 Profissional da saúde? Clique
                                 aqui!
                             </a>
@@ -138,7 +138,7 @@
                         a facilidade que faltava e a seu medico a praticidade que ele buscava. Controle seus alarmes de
                         medicamentos, verifique as melhores drogarias para adquirir os itens da sua receita e ainda receba dicas
                         dos laboratórios mais perto de você que oferecem o exame que seu médico acabou de lhe prescrever. </p>
-                    <a href="#/register/professional" class="btn btn-outline-success mtop20"> É profissional da saúde? Clique aqui!</a>
+                    <a href="#" class="btn btn-outline-success mtop20"> É profissional da saúde? Clique aqui!</a>
                 </div>
             </div>
         </div>

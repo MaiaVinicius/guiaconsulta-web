@@ -11,14 +11,15 @@
 
     <link rel="shortcut icon" href="guiaconsulta-36x36.png">
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
 
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
     <!-- Bootstrap core CSS -->
-    <link href="css/custom.css" rel="stylesheet">
-    <link href="css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ URL::asset('css/custom.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/font-awesome.css') }}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{ URL::asset('css/wizard.css') }}">
 
     <title>Guia Consulta</title>
 
@@ -29,12 +30,12 @@
 <div id="app">
     <router-view></router-view>
 </div>
-<script src="/js/app.js"></script>
-<script src="/js/jquery.mask.min.js"></script>
+<script src="{{ URL::asset('/js/app.js') }}"></script>
+<script src="{{ URL::asset('/js/jquery.mask.min.js') }}"></script>
 <script>
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker
-            .register('./service-worker.js')
+            .register('{{ URL::asset('service-worker.js') }}')
             .then(function () {
                 console.log('Service Worker Registered');
             });

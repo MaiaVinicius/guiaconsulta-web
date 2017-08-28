@@ -41947,7 +41947,8 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
         path: '/*',
         name: 'Not Found',
         component: __WEBPACK_IMPORTED_MODULE_7__components_NotFound_vue___default.a
-    }]
+    }],
+    mode: 'history'
 }));
 
 /***/ }),
@@ -44685,7 +44686,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('img', {
     staticClass: "mainLogo",
     attrs: {
-      "src": "images/logo_full_white.png"
+      "src": "/images/logo_full_white.png"
     }
   })]), _vm._v(" "), _c('button', {
     staticClass: "navbar-toggler",
@@ -44716,7 +44717,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('a', {
     staticClass: "btn btn-outline-warning my-2 my-sm-0",
     attrs: {
-      "href": "#/register/professional"
+      "href": "/register/professional"
     }
   }, [_vm._v("\n                            Profissional da saúde? Clique\n                            aqui!\n                        ")])])])])]), _vm._v(" "), _c('div', {
     staticClass: "jumbotron"
@@ -44833,7 +44834,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v("Transformamos a forma de relacionamento entre médico e paciente, trazendo a você\n                    a facilidade que faltava e a seu medico a praticidade que ele buscava. Controle seus alarmes de\n                    medicamentos, verifique as melhores drogarias para adquirir os itens da sua receita e ainda receba dicas\n                    dos laboratórios mais perto de você que oferecem o exame que seu médico acabou de lhe prescrever. ")]), _vm._v(" "), _c('a', {
     staticClass: "btn btn-outline-success mtop20",
     attrs: {
-      "href": "#/register/professional"
+      "href": "#"
     }
   }, [_vm._v(" É profissional da saúde? Clique aqui!")])])])])
 }]}
@@ -46173,35 +46174,31 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
         console.log('Component mounted.');
+    },
+    data: function data() {
+        return {
+            current_step: 1,
+            steps: [{
+                id: 1,
+                label: 'Dados do perfil'
+            }, {
+                id: 2,
+                label: 'Foto'
+            }, {
+                id: 3,
+                label: 'Especialidades'
+            }, {
+                id: 4,
+                label: 'Consultórios'
+            }, {
+                id: 5,
+                label: 'Preços e convenios'
+            }]
+        };
     }
 });
 
@@ -46210,7 +46207,39 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('app-header'), _vm._v(" "), _vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('hr'), _vm._v(" "), _c('app-footer')], 1)
+  return _c('div', [_c('app-header'), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_vm._m(1), _vm._v(" "), _c('div', {
+    staticClass: "col-md-12 wizard"
+  }, [_c('ul', {
+    staticClass: "nav nav-pills nav-justified thumbnail setup-panel"
+  }, _vm._l((_vm.steps), function(step) {
+    return _c('li', {
+      class: {
+        disabled: _vm.current_step != step.id, active: _vm.current_step == step.id
+      }
+    }, [_c('a', {
+      attrs: {
+        "href": "#"
+      }
+    }, [_c('h4', {
+      staticClass: "list-group-item-heading"
+    }, [_c('button', {
+      staticClass: "btn btn-circle btn-info"
+    }, [_vm._v(_vm._s(step.id))])]), _vm._v(" "), _c('p', {
+      staticClass: "list-group-item-text hidden-xs"
+    }, [_vm._v(" " + _vm._s(step.label))])])])
+  }))])]), _vm._v(" "), _vm._m(2), _vm._v(" "), (_vm.current_step == 2) ? _c('div', {
+    staticClass: "row"
+  }, [_vm._m(3)]) : _vm._e(), _vm._v(" "), (_vm.current_step == 3) ? _c('div', {
+    staticClass: "row"
+  }, [_vm._m(4)]) : _vm._e(), _vm._v(" "), (_vm.current_step == 4) ? _c('div', {
+    staticClass: "row"
+  }, [_vm._m(5)]) : _vm._e(), _vm._v(" "), (_vm.current_step == 5) ? _c('div', {
+    staticClass: "row"
+  }, [_vm._m(6)]) : _vm._e()]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('app-footer')], 1)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "container-fluid greyBg"
@@ -46221,81 +46250,15 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('h3', [_vm._v("Cadastro de Profissional")])])])])
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "container"
-  }, [_c('div', {
-    staticClass: "row"
-  }, [_c('div', {
     staticClass: "col-md-12 col-xs-12 col-sm-12 mtop20"
   }, [_c('div', {
     staticClass: "alert alert-warning",
     attrs: {
       "role": "alert"
     }
-  }, [_vm._v("\n                    As informações serão auditadas e estão sujeitas a revisão\n                ")])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-12 wizard"
-  }, [_c('ul', {
-    staticClass: "nav nav-pills nav-justified thumbnail setup-panel"
-  }, [_c('li', {
-    staticClass: "active"
-  }, [_c('a', {
-    attrs: {
-      "href": "#step-1"
-    }
-  }, [_c('h4', {
-    staticClass: "list-group-item-heading"
-  }, [_c('button', {
-    staticClass: "btn btn-circle btn-info"
-  }, [_vm._v("1")])]), _vm._v(" "), _c('p', {
-    staticClass: "list-group-item-text hidden-xs"
-  }, [_vm._v(" Dados do perfil")])])]), _vm._v(" "), _c('li', {
-    staticClass: "disabled"
-  }, [_c('a', {
-    attrs: {
-      "href": "#step-2"
-    }
-  }, [_c('h4', {
-    staticClass: "list-group-item-heading"
-  }, [_c('button', {
-    staticClass: "btn btn-circle btn-info"
-  }, [_vm._v("2")])]), _vm._v(" "), _c('p', {
-    staticClass: "list-group-item-text  hidden-xs"
-  }, [_vm._v("Foto")])])]), _vm._v(" "), _c('li', {
-    staticClass: "disabled"
-  }, [_c('a', {
-    attrs: {
-      "href": "#step-3"
-    }
-  }, [_c('h4', {
-    staticClass: "list-group-item-heading"
-  }, [_c('button', {
-    staticClass: "btn btn-circle btn-info"
-  }, [_vm._v("3")])]), _vm._v(" "), _c('p', {
-    staticClass: "list-group-item-text   hidden-xs"
-  }, [_vm._v("Especialidades")])])]), _vm._v(" "), _c('li', {
-    staticClass: "disabled"
-  }, [_c('a', {
-    attrs: {
-      "href": "#step-4"
-    }
-  }, [_c('h4', {
-    staticClass: "list-group-item-heading"
-  }, [_c('button', {
-    staticClass: "btn btn-circle btn-info"
-  }, [_vm._v("4")])]), _vm._v(" "), _c('p', {
-    staticClass: "list-group-item-text  hidden-xs"
-  }, [_vm._v("Consultórios")])])]), _vm._v(" "), _c('li', {
-    staticClass: "disabled"
-  }, [_c('a', {
-    attrs: {
-      "href": "#step-5"
-    }
-  }, [_c('h4', {
-    staticClass: "list-group-item-heading"
-  }, [_c('button', {
-    staticClass: "btn btn-circle btn-info"
-  }, [_vm._v("5")])]), _vm._v(" "), _c('p', {
-    staticClass: "list-group-item-text   hidden-xs"
-  }, [_vm._v("Preços e convênios")])])])])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\n                    As informações serão auditadas e estão sujeitas a revisão\n                ")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
     staticClass: "row"
   }, [_c('div', {
     staticClass: "col-xs-12 col-md-12  stepsHolder"
@@ -46446,9 +46409,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   })])]), _vm._v(" "), _c('div', {
     staticClass: "col-md-6 text-right"
-  })])])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
+  })])])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
     staticClass: "col-xs-12  col-md-12  stepsHolder"
   }, [_c('div', {
     staticClass: "col-md-12 well setup-content",
@@ -46503,9 +46466,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   })])]), _vm._v(" "), _c('div', {
     staticClass: "col-md-6 text-right"
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
     staticClass: "col-xs-12  col-md-12  stepsHolder"
   }, [_c('div', {
     staticClass: "col-md-12 well setup-content",
@@ -46618,9 +46581,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   })])]), _vm._v(" "), _c('div', {
     staticClass: "col-md-6 mtop20 text-right"
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
     staticClass: "col-xs-12  col-md-12  stepsHolder"
   }, [_c('div', {
     staticClass: "col-md-12 well setup-content",
@@ -46629,9 +46592,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('h1', {
     staticClass: "text-center"
-  }, [_vm._v(" 4")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
+  }, [_vm._v(" 4")])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
     staticClass: "col-xs-12  col-md-12 stepsHolder"
   }, [_c('div', {
     staticClass: "col-md-12 well setup-content",
@@ -46640,7 +46603,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('h1', {
     staticClass: "text-center"
-  }, [_vm._v(" 5")])])])])])
+  }, [_vm._v(" 5")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -46863,12 +46826,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('a', {
     staticClass: "navbar-brand",
     attrs: {
-      "href": "#"
+      "href": "/"
     }
   }, [_c('img', {
     staticClass: "mainLogo",
     attrs: {
-      "src": "images/logo_full_white.png"
+      "src": "/images/logo_full_white.png"
     }
   })]), _vm._v(" "), _c('button', {
     staticClass: "navbar-toggler",

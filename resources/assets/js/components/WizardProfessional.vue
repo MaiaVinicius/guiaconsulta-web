@@ -24,38 +24,13 @@
 
                 <div class="col-md-12 wizard">
                     <ul class="nav nav-pills nav-justified thumbnail setup-panel">
-                        <li class="active"><a href="#step-1">
+                        <li v-for="step in steps" v-bind:class="{ disabled: current_step != step.id, active: current_step == step.id }">
+                            <a href="#">
                             <h4 class="list-group-item-heading">
-                                <button class="btn btn-circle btn-info">1</button>
+                                <button class="btn btn-circle btn-info">{{step.id}}</button>
                             </h4>
-                            <p class="list-group-item-text hidden-xs"> Dados do perfil</p>
+                            <p class="list-group-item-text hidden-xs"> {{step.label}}</p>
                         </a></li>
-                        <li class="disabled"><a href="#step-2">
-                            <h4 class="list-group-item-heading">
-                                <button class="btn btn-circle btn-info">2</button>
-                            </h4>
-                            <p class="list-group-item-text  hidden-xs">Foto</p>
-                        </a></li>
-                        <li class="disabled"><a href="#step-3">
-                            <h4 class="list-group-item-heading">
-                                <button class="btn btn-circle btn-info">3</button>
-                            </h4>
-                            <p class="list-group-item-text   hidden-xs">Especialidades</p>
-                        </a></li>
-
-                        <li class="disabled"><a href="#step-4">
-                            <h4 class="list-group-item-heading">
-                                <button class="btn btn-circle btn-info">4</button>
-                            </h4>
-                            <p class="list-group-item-text  hidden-xs">Consultórios</p>
-                        </a></li>
-                        <li class="disabled"><a href="#step-5">
-                            <h4 class="list-group-item-heading">
-                                <button class="btn btn-circle btn-info">5</button>
-                            </h4>
-                            <p class="list-group-item-text   hidden-xs">Preços e convênios</p>
-                        </a></li>
-
                     </ul>
                 </div>
             </div>
@@ -167,7 +142,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row" v-if="current_step == 2">
                 <div class="col-xs-12  col-md-12  stepsHolder">
                     <div class="col-md-12 well setup-content" id="step-2">
 
@@ -202,7 +177,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" v-if="current_step == 3">
                 <div class="col-xs-12  col-md-12  stepsHolder">
                     <div class="col-md-12 well setup-content" id="step-3">
 
@@ -301,14 +276,14 @@
 
                 </div>
             </div>
-            <div class="row">
+            <div class="row" v-if="current_step == 4">
                 <div class="col-xs-12  col-md-12  stepsHolder">
                     <div class="col-md-12 well setup-content" id="step-4">
                         <h1 class="text-center"> 4</h1>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" v-if="current_step == 5">
                 <div class="col-xs-12  col-md-12 stepsHolder">
                     <div class="col-md-12 well setup-content" id="step-5">
                         <h1 class="text-center"> 5</h1>
@@ -331,6 +306,27 @@
     export default {
         mounted() {
             console.log('Component mounted.')
+        },
+        data () {
+            return {
+                current_step: 1,
+                steps: [{
+                    id: 1,
+                    label: 'Dados do perfil'
+                }, {
+                    id: 2,
+                    label: 'Foto'
+                }, {
+                    id: 3,
+                    label: 'Especialidades'
+                }, {
+                    id: 4,
+                    label: 'Consultórios'
+                }, {
+                    id: 5,
+                    label: 'Preços e convenios'
+                }]
+            }
         }
     }
 </script>
