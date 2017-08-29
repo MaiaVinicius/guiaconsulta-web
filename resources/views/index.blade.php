@@ -28,7 +28,9 @@
 </head>
 <body>
 <div id="app">
-    <router-view></router-view>
+    <transition name="fade">
+        <router-view></router-view>
+    </transition>
 </div>
 <script src="{{ URL::asset('/js/app.js') }}"></script>
 <script src="{{ URL::asset('/js/jquery.mask.min.js') }}"></script>

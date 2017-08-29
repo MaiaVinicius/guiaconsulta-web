@@ -48,5 +48,5 @@ export default new Router({
             component: NotFound
         }
     ],
-    mode: 'history'
+    // mode: 'history'
 })

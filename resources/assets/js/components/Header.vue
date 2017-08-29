@@ -4,7 +4,7 @@
             <div class="container-fluid">
 
                 <nav class="navbar navbar-expand-md navbar-transparent dark bg-dark">
-                    <a class="navbar-brand" href="/"><img src="/images/logo_full_white.png" class="mainLogo"></a>
+                    <a class="navbar-brand" href="/#"><img src="/images/logo_full_white.png" class="mainLogo"></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarsExampleDefault"
                             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
