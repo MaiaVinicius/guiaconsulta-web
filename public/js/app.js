@@ -45949,37 +45949,91 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
-        console.log('Component mounted.');
+        var step = parseInt(this.$route.hash.replace('#step-', ""));
+        if (Number.isInteger(step)) {
+            this.changeStep(step);
+        }
     },
     data: function data() {
         return {
             current_step: 1,
+            specialties: [{
+                id: 1,
+                name: 'Anestesista'
+            }, {
+                id: 2,
+                name: 'Cardiologista'
+            }, {
+                id: 3,
+                name: 'Clínico Geral'
+            }],
+            professionalSpecialties: [{
+                id: 1,
+                specialty: 3,
+                rqe: "12345",
+                subspecialties: [{ id: 1, name: "Cardiograma", selected: true, rqe: "453" }, { id: 2, name: "Cardi", selected: false, rqe: "" }]
+            }],
             steps: [{
                 id: 1,
                 label: 'Dados do perfil',
-                url: '#step-1'
+                url: '#/professional/profile/wizard#step-1'
             }, {
                 id: 2,
                 label: 'Foto',
-                url: '#step-2'
+                url: '#/professional/profile/wizard#step-2'
             }, {
                 id: 3,
                 label: 'Especialidades',
-                url: '#step-3'
+                url: '#/professional/profile/wizard#step-3'
             }, {
                 id: 4,
                 label: 'Consultórios',
-                url: '#step-4'
-
+                url: '#/professional/profile/wizard#step-4'
             }, {
                 id: 5,
                 label: 'Preços e convenios',
-                url: '#step-5'
+                url: '#/professional/profile/wizard#step-5'
             }]
         };
+    },
+
+    methods: {
+        changeStep: function changeStep(toStep) {
+            this.current_step = toStep;
+        },
+        nextStep: function nextStep() {
+            this.current_step++;
+        },
+        backStep: function backStep() {
+            this.current_step--;
+        },
+        addSpecialty: function addSpecialty() {
+            this.professionalSpecialties.push({});
+        },
+        removeSpecialty: function removeSpecialty(id) {
+            for (var i = 0; i < this.professionalSpecialties.length; i++) {
+                if (this.professionalSpecialties[i].id) {
+                    if (this.professionalSpecialties[i].id === id) this.professionalSpecialties.splice(i, 1);
+                }
+            }
+        }
     }
 });
 
@@ -46000,6 +46054,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     return _c('li', {
       class: {
         disabled: _vm.current_step != step.id, active: _vm.current_step == step.id
+      },
+      on: {
+        "click": function($event) {
+          _vm.changeStep(step.id)
+        }
       }
     }, [_c('a', {
       attrs: {
@@ -46012,34 +46071,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }, [_vm._v(_vm._s(step.id))])]), _vm._v(" "), _c('p', {
       staticClass: "list-group-item-text hidden-xs"
     }, [_vm._v(" " + _vm._s(step.label))])])])
-  }))])]), _vm._v(" "), _vm._m(2), _vm._v(" "), (_vm.current_step == 2) ? _c('div', {
-    staticClass: "row"
-  }, [_vm._m(3)]) : _vm._e(), _vm._v(" "), (_vm.current_step == 3) ? _c('div', {
-    staticClass: "row"
-  }, [_vm._m(4)]) : _vm._e(), _vm._v(" "), (_vm.current_step == 4) ? _c('div', {
-    staticClass: "row"
-  }, [_vm._m(5)]) : _vm._e(), _vm._v(" "), (_vm.current_step == 5) ? _c('div', {
-    staticClass: "row"
-  }, [_vm._m(6)]) : _vm._e()]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('app-footer')], 1)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "container-fluid greyBg"
-  }, [_c('div', {
-    staticClass: "row p20 text-center"
-  }, [_c('div', {
-    staticClass: "col-md-12"
-  }, [_c('h3', [_vm._v("Cadastro de Profissional")])])])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "col-md-12 col-xs-12 col-sm-12 mtop20"
-  }, [_c('div', {
-    staticClass: "alert alert-warning",
+  }))])]), _vm._v(" "), _c('transition', {
     attrs: {
-      "role": "alert"
+      "name": "fade"
     }
-  }, [_vm._v("\n                    As informações serão auditadas e estão sujeitas a revisão\n                ")])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  }, [(_vm.current_step == 1) ? _c('div', {
     staticClass: "row"
   }, [_c('div', {
     staticClass: "col-xs-12 col-md-12  stepsHolder"
@@ -46158,7 +46194,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "for": "exampleFormControlTextarea1"
     }
-  }, [_vm._v("Formação acadêmica (graduação, pós graduação,\n                                    residência)")]), _vm._v(" "), _c('textarea', {
+  }, [_vm._v("Formação acadêmica (graduação, pós graduação,\n                                        residência)")]), _vm._v(" "), _c('textarea', {
     staticClass: "form-control",
     attrs: {
       "id": "exampleFormControlTextarea1",
@@ -46169,19 +46205,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v("Máximo de 500 caracteres.")])])]), _vm._v(" "), _c('div', {
     staticClass: "col-md-6 text-left"
   }, [_c('button', {
-    staticClass: "btn btn-outline-secondary",
-    attrs: {
-      "id": "#"
-    }
-  }, [_c('i', {
-    staticClass: "fa fa-arrow-left",
-    attrs: {
-      "aria-hidden": "true"
-    }
-  }), _vm._v(" Voltar\n                            ")]), _vm._v(" "), _c('button', {
     staticClass: "btn btn-primary colorBase ",
     attrs: {
       "id": "activate-step-2"
+    },
+    on: {
+      "click": _vm.nextStep
     }
   }, [_vm._v("Continuar "), _c('i', {
     staticClass: "fa fa-arrow-right",
@@ -46190,9 +46219,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   })])]), _vm._v(" "), _c('div', {
     staticClass: "col-md-6 text-right"
-  })])])])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  })])])])]) : _vm._e()]), _vm._v(" "), _c('transition', {
+    attrs: {
+      "name": "fade"
+    }
+  }, [(_vm.current_step == 2) ? _c('div', {
+    staticClass: "row"
+  }, [_c('div', {
     staticClass: "col-xs-12  col-md-12  stepsHolder"
   }, [_c('div', {
     staticClass: "col-md-12 well setup-content",
@@ -46229,27 +46262,37 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "btn btn-outline-secondary",
     attrs: {
       "id": ""
+    },
+    on: {
+      "click": _vm.backStep
     }
   }, [_c('i', {
     staticClass: "fa fa-arrow-left",
     attrs: {
       "aria-hidden": "true"
     }
-  }), _vm._v("\n                            Voltar\n                        ")]), _vm._v(" "), _c('button', {
+  }), _vm._v("\n                                Voltar\n                            ")]), _vm._v(" "), _c('button', {
     staticClass: "btn btn-primary colorBase ",
     attrs: {
       "id": "activate-step-3"
+    },
+    on: {
+      "click": _vm.nextStep
     }
-  }, [_vm._v("Continuar "), _c('i', {
+  }, [_vm._v("\n                                Continuar "), _c('i', {
     staticClass: "fa fa-arrow-right",
     attrs: {
       "aria-hidden": "true"
     }
   })])]), _vm._v(" "), _c('div', {
     staticClass: "col-md-6 text-right"
-  })])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  })])])]) : _vm._e()]), _vm._v(" "), _c('transition', {
+    attrs: {
+      "name": "fade"
+    }
+  }, [(_vm.current_step == 3) ? _c('div', {
+    staticClass: "row"
+  }, [_c('div', {
     staticClass: "col-xs-12  col-md-12  stepsHolder"
   }, [_c('div', {
     staticClass: "col-md-12 well setup-content",
@@ -46263,108 +46306,200 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }), _vm._v(" "), _c('div', {
     staticClass: "col-md-6 text-right"
   }, [_c('button', {
-    staticClass: "btn btn-info colorBase"
-  }, [_vm._v(" Adicionar Especialidade")])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6"
-  }, [_c('label', [_vm._v("Selecione a Especialidade")]), _vm._v(" "), _c('select', {
-    staticClass: "form-control",
-    attrs: {
-      "name": "conselho"
+    staticClass: "btn btn-info colorBase",
+    on: {
+      "click": _vm.addSpecialty
     }
-  }, [_c('option', [_vm._v("Escolha uma especialidade")]), _vm._v(" "), _c('option', [_vm._v("Médico - Acupuntura")]), _vm._v(" "), _c('option', [_vm._v("Médico - Cardiologia")]), _vm._v(" "), _c('option', [_vm._v("Médico - Dermatologia")])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6"
-  }, [_c('label', [_vm._v("RQE")]), _vm._v(" "), _c('div', {
-    staticClass: "input-group "
-  }, [_c('div', {
-    staticClass: "input-group-addon"
-  }, [_vm._v(" RQE")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": "Nome do Profissional"
-    }
-  })])]), _vm._v(" "), _c('div', {
+  }, [_c('i', {
+    staticClass: "fa fa-plus"
+  }), _vm._v(" Adicionar Especialidade\n                                ")])]), _vm._v(" "), _c('div', {
     staticClass: "col-md-12"
-  }, [_c('h4', {
-    staticClass: "mtop20 bb1"
-  }, [_vm._v("Área de Atuação")]), _vm._v(" "), _c('div', {
-    staticClass: "row bb1"
-  }, [_c('div', {
-    staticClass: "col-md-1 "
-  }, [_c('div', {
-    staticClass: "form-check"
-  }, [_c('label', {
-    staticClass: "form-check-label"
-  }, [_c('input', {
-    staticClass: "form-check-input",
-    attrs: {
-      "type": "checkbox"
-    }
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6 espname"
-  }, [_vm._v(" Nome subsespecialidade")]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-5"
-  }, [_c('div', {
-    staticClass: "input-group "
-  }, [_c('div', {
-    staticClass: "input-group-addon"
-  }, [_vm._v(" RQE")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": "Nome do Profissional"
-    }
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "row bb1"
-  }, [_c('div', {
-    staticClass: "col-md-1 "
-  }, [_c('div', {
-    staticClass: "form-check"
-  }, [_c('label', {
-    staticClass: "form-check-label"
-  }, [_c('input', {
-    staticClass: "form-check-input",
-    attrs: {
-      "type": "checkbox"
-    }
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-6 espname"
-  }, [_vm._v(" Nome subsespecialidade")]), _vm._v(" "), _c('div', {
-    staticClass: "col-md-5"
-  }, [_c('div', {
-    staticClass: "input-group "
-  }, [_c('div', {
-    staticClass: "input-group-addon"
-  }, [_vm._v(" RQE")]), _vm._v(" "), _c('input', {
-    staticClass: "form-control",
-    attrs: {
-      "type": "text",
-      "placeholder": "Nome do Profissional"
-    }
-  })])])])])]), _vm._v(" "), _c('div', {
+  }, _vm._l((_vm.professionalSpecialties), function(professionalSpecialty) {
+    return _c('div', {
+      staticClass: "row mt-5"
+    }, [_c('div', {
+      staticClass: "col-md-12"
+    }, [_c('hr'), _vm._v(" "), _c('button', {
+      staticClass: "btn btn-danger btn-sm float-right",
+      on: {
+        "click": function($event) {
+          _vm.removeSpecialty(professionalSpecialty.id)
+        }
+      }
+    }, [_c('i', {
+      staticClass: "fa fa-times"
+    })])]), _vm._v(" "), _c('div', {
+      staticClass: "col-md-6"
+    }, [_c('label', {
+      staticClass: "w-100"
+    }, [_vm._v("Selecione a Especialidade\n                                            "), _c('select', {
+      directives: [{
+        name: "model",
+        rawName: "v-model",
+        value: (professionalSpecialty.specialty),
+        expression: "professionalSpecialty.specialty"
+      }],
+      staticClass: "form-control",
+      attrs: {
+        "name": "conselho"
+      },
+      on: {
+        "change": function($event) {
+          var $$selectedVal = Array.prototype.filter.call($event.target.options, function(o) {
+            return o.selected
+          }).map(function(o) {
+            var val = "_value" in o ? o._value : o.value;
+            return val
+          });
+          professionalSpecialty.specialty = $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+        }
+      }
+    }, _vm._l((_vm.specialties), function(specialty) {
+      return _c('option', {
+        domProps: {
+          "value": specialty.id
+        }
+      }, [_vm._v(_vm._s(specialty.name) + "\n                                                ")])
+    }))])]), _vm._v(" "), _c('div', {
+      staticClass: "col-md-6"
+    }, [_c('label', {
+      staticClass: "w-100"
+    }, [_vm._v("RQE\n                                            "), _c('div', {
+      staticClass: "input-group "
+    }, [_c('div', {
+      staticClass: "input-group-addon"
+    }, [_vm._v(" RQE")]), _vm._v(" "), _c('input', {
+      directives: [{
+        name: "model",
+        rawName: "v-model",
+        value: (professionalSpecialty.rqe),
+        expression: "professionalSpecialty.rqe"
+      }],
+      staticClass: "form-control",
+      attrs: {
+        "type": "text",
+        "placeholder": "Nome do Profissional"
+      },
+      domProps: {
+        "value": (professionalSpecialty.rqe)
+      },
+      on: {
+        "input": function($event) {
+          if ($event.target.composing) { return; }
+          professionalSpecialty.rqe = $event.target.value
+        }
+      }
+    })])])]), _vm._v(" "), _c('div', {
+      staticClass: "col-md-12"
+    }, [_c('h4', {
+      staticClass: "mtop20 bb1"
+    }, [_vm._v("Área de Atuação")]), _vm._v(" "), _vm._l((professionalSpecialty.subspecialties), function(subspecialty) {
+      return _c('div', {
+        staticClass: "row bb1"
+      }, [_c('div', {
+        staticClass: "col-md-1 "
+      }, [_c('div', {
+        staticClass: "form-check"
+      }, [_c('label', {
+        staticClass: "form-check-label"
+      }, [_c('input', {
+        directives: [{
+          name: "model",
+          rawName: "v-model",
+          value: (subspecialty.selected),
+          expression: "subspecialty.selected"
+        }],
+        staticClass: "form-check-input",
+        attrs: {
+          "type": "checkbox"
+        },
+        domProps: {
+          "checked": subspecialty.selected,
+          "checked": Array.isArray(subspecialty.selected) ? _vm._i(subspecialty.selected, null) > -1 : (subspecialty.selected)
+        },
+        on: {
+          "__c": function($event) {
+            var $$a = subspecialty.selected,
+              $$el = $event.target,
+              $$c = $$el.checked ? (true) : (false);
+            if (Array.isArray($$a)) {
+              var $$v = null,
+                $$i = _vm._i($$a, $$v);
+              if ($$el.checked) {
+                $$i < 0 && (subspecialty.selected = $$a.concat($$v))
+              } else {
+                $$i > -1 && (subspecialty.selected = $$a.slice(0, $$i).concat($$a.slice($$i + 1)))
+              }
+            } else {
+              subspecialty.selected = $$c
+            }
+          }
+        }
+      })])])]), _vm._v(" "), _c('div', {
+        staticClass: "col-md-6 espname"
+      }, [_vm._v(" " + _vm._s(subspecialty.name))]), _vm._v(" "), _c('div', {
+        staticClass: "col-md-5"
+      }, [_c('div', {
+        staticClass: "input-group "
+      }, [_c('div', {
+        staticClass: "input-group-addon"
+      }, [_vm._v(" RQE")]), _vm._v(" "), _c('input', {
+        directives: [{
+          name: "model",
+          rawName: "v-model",
+          value: (subspecialty.rqe),
+          expression: "subspecialty.rqe"
+        }],
+        staticClass: "form-control",
+        attrs: {
+          "type": "text",
+          "placeholder": "Número do RQE"
+        },
+        domProps: {
+          "value": (subspecialty.rqe)
+        },
+        on: {
+          "input": function($event) {
+            if ($event.target.composing) { return; }
+            subspecialty.rqe = $event.target.value
+          }
+        }
+      })])])])
+    })], 2)])
+  }))]), _vm._v(" "), _c('div', {
     staticClass: "col-md-6 mtop20 text-left"
   }, [_c('button', {
-    staticClass: "btn btn-outline-secondary"
+    staticClass: "btn btn-outline-secondary",
+    on: {
+      "click": _vm.backStep
+    }
   }, [_c('i', {
     staticClass: "fa fa-arrow-left",
     attrs: {
       "aria-hidden": "true"
     }
-  }), _vm._v("\n                            Voltar\n                        ")]), _vm._v(" "), _c('button', {
+  }), _vm._v("\n                                Voltar\n                            ")]), _vm._v(" "), _c('button', {
     staticClass: "btn btn-primary colorBase ",
     attrs: {
       "id": "activate-step-4"
+    },
+    on: {
+      "click": _vm.nextStep
     }
-  }, [_vm._v("Continuar "), _c('i', {
+  }, [_vm._v("\n                                Continuar "), _c('i', {
     staticClass: "fa fa-arrow-right",
     attrs: {
       "aria-hidden": "true"
     }
   })])]), _vm._v(" "), _c('div', {
     staticClass: "col-md-6 mtop20 text-right"
-  })])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  })])])]) : _vm._e()]), _vm._v(" "), _c('transition', {
+    attrs: {
+      "name": "fade"
+    }
+  }, [(_vm.current_step == 4) ? _c('div', {
+    staticClass: "row"
+  }, [_c('div', {
     staticClass: "col-xs-12  col-md-12  stepsHolder"
   }, [_c('div', {
     staticClass: "col-md-12 well setup-content",
@@ -46373,9 +46508,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('h1', {
     staticClass: "text-center"
-  }, [_vm._v(" 4")])])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  }, [_vm._v(" 4")])])])]) : _vm._e()]), _vm._v(" "), _c('transition', {
+    attrs: {
+      "name": "fade"
+    }
+  }, [(_vm.current_step == 5) ? _c('div', {
+    staticClass: "row"
+  }, [_c('div', {
     staticClass: "col-xs-12  col-md-12 stepsHolder"
   }, [_c('div', {
     staticClass: "col-md-12 well setup-content",
@@ -46384,7 +46523,24 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('h1', {
     staticClass: "text-center"
-  }, [_vm._v(" 5")])])])
+  }, [_vm._v(" 5")])])])]) : _vm._e()])], 1)], 1)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "container-fluid greyBg"
+  }, [_c('div', {
+    staticClass: "row p20 text-center"
+  }, [_c('div', {
+    staticClass: "col-md-12"
+  }, [_c('h3', [_vm._v("Cadastro de Profissional")])])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-12 col-xs-12 col-sm-12 mtop20"
+  }, [_c('div', {
+    staticClass: "alert alert-warning",
+    attrs: {
+      "role": "alert"
+    }
+  }, [_vm._v("\n                    As informações serão auditadas e estão sujeitas a revisão\n                ")])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
