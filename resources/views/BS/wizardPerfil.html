@@ -1,0 +1,695 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Jumbotron Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+          <!-- Bootstrap core CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+<link href="css/wizard.css" rel="stylesheet">
+ <link href="css/font-awesome.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+      
+      <div class="header header-blue">
+      <div class="container-fluid">
+
+    <nav class="navbar navbar-expand-md navbar-transparent dark bg-dark">
+      <a class="navbar-brand" href="#"><img src="images/logo_full_white.png" class="mainLogo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon dark"><i class="fa fa-bars" aria-hidden="true"></i></span>
+      </button>
+
+      <div class="collapse navbar-collapse " id="navbarsExampleDefault">
+    <ul class="navbar-nav ml-auto ">   
+
+          <li class="nav-item">
+            <a class="nav-link" href="#" >Olá [Nome Administrador]</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="#">Sair</a>
+          </li>
+        <!--  <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>-->
+        </ul>
+        
+      </div>
+    </nav>
+</div>
+    
+  
+</div>
+      
+          <div class="container-fluid greyBg">
+              <div class="row p20 text-center">
+          
+              
+                            <div class="col-md-12">
+                  <h3>Cadastro de Profissional</h3>
+                  
+                </div>
+                  
+               
+              </div>
+            
+      
+      </div>
+
+      
+   <div class="container">
+      
+      <div class="row">
+      
+          
+          <div class="col-md-12 col-xs-12 col-sm-12 mtop20" >
+              <div class="alert alert-warning" role="alert">
+  As informações serão auditadas e estão sujeitas a revisão
+</div>
+           
+              </div>
+               
+        <div class="col-md-12 wizard">
+            <ul class="nav nav-pills nav-justified thumbnail setup-panel">
+                <li class="active"><a href="#step-1">
+                    <h4 class="list-group-item-heading"><button class="btn btn-circle btn-info">1</button></h4>
+                    <p class="list-group-item-text hidden-xs"> Dados do perfil</p>
+                </a></li>
+                <li class="disabled"><a href="#step-2">
+                    <h4 class="list-group-item-heading"><button class="btn btn-circle btn-info">2</button></h4>
+                    <p class="list-group-item-text  hidden-xs">Foto</p>
+                </a></li>
+                <li class="disabled"><a href="#step-3">
+                    <h4 class="list-group-item-heading"><button class="btn btn-circle btn-info">3</button></h4>
+                    <p class="list-group-item-text   hidden-xs">Especialidades</p>
+                </a></li>
+                
+                    <li class="disabled"><a href="#step-4">
+                    <h4 class="list-group-item-heading"><button class="btn btn-circle btn-info">4</button></h4>
+                    <p class="list-group-item-text  hidden-xs">Consultórios</p>
+                </a></li>
+                    <li class="disabled"><a href="#step-5">
+                    <h4 class="list-group-item-heading"><button class="btn btn-circle btn-info">5</button></h4>
+                    <p class="list-group-item-text   hidden-xs">Preços e convênios</p>
+                </a></li>
+                    
+            </ul>
+        </div>
+	</div>
+    <div class="row">
+        <div class="col-xs-12 col-md-12  stepsHolder">
+            <div class="col-md-12 well setup-content text-center" id="step-1">
+                <!-- <h1> Passo 1</h1>-->
+                <div class="row p20  text-left">
+             <div class="col-md-4 col-sm-12 mtop20">
+                <label for="conselho">Selecione o Conselho</label>
+                 <select class="form-control" name="conselho">
+                    <option>Selecione o Conselho</option>
+                     <option>CRM</option>
+                      <option>CRO</option>
+                      <option>CREFITO</option>
+                </select>
+                
+            </div>
+                
+                      <div class="col-md-3 col-sm-12 mtop20">
+                
+                  <label for="conselho">Selecione Estado do Conselho</label>
+                 <select class="form-control" name="conselho">
+                    <option>Selecione o Conselho</option>
+                     <option>RJ</option>
+                      <option>SP</option>
+                      <option>MG</option>
+                </select>
+                    </div>
+                           <div class="col-md-2 col-sm-12 mtop20">
+                
+                  <label for="conselho">Número do Conselho</label>
+            <div class="input-group ">
+                <div class="input-group-addon"> <i class="fa fa-address-card" aria-hidden="true"></i></div>
+                   <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Número do Conselho">
+                             </div>
+                          </div>
+                    
+                    
+                             <div class="col-md-3 col-sm-12 mtop20">
+                
+                  <label for="conselho">CPF</label>
+            <div class="input-group ">
+                <div class="input-group-addon"> <i class="fa fa-id-card-o" aria-hidden="true"></i></div>
+                   <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="CPF">
+                             </div>
+                          </div>
+                    
+                    
+                    <div class="col-md-6 col-sm-12 mtop20">
+                               
+                  <label for="conselho">Nome  Completo do Profissional</label>
+            <div class="input-group ">
+                <div class="input-group-addon"> <i class="fa fa-user" aria-hidden="true"></i></div>
+                   <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Nome do Profissional">
+                             </div>
+                    
+                    </div>
+                    
+                        <div class="col-md-12 col-sm-12 mtop20">
+                               
+                  
+          <div class="form-group">
+    <label for="exampleFormControlTextarea1">Apresentação profissional</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+              <span class="legenda">Máximo de 500 caracteres.</span>
+  </div>
+                    
+                    </div>
+                    
+                                        <div class="col-md-12 col-sm-12 mtop20">
+                               
+     
+          <div class="form-group">
+    <label for="exampleFormControlTextarea1">Formação acadêmica (graduação, pós graduação, residência)</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+              <span class="legenda">Máximo de 500 caracteres.</span>
+  </div>
+                    
+                    </div>
+                    
+                    
+                      <div class="col-md-6 text-left">
+                          <button id="#" class="btn btn-outline-secondary"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Voltar</button>
+                    <button id="activate-step-2" class="btn btn-primary colorBase ">Continuar <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    
+                    </div>
+                    
+                      <div class="col-md-6 text-right">
+                    
+                   <!--   <button id="activate-step-2" class="btn btn-primary btn-lg">Próximo</button>-->
+                    
+                    </div>
+                    
+                  
+                    
+                    
+            </div>
+               
+                </div>
+                
+               
+            </div>
+        </div>
+    
+    <div class="row">
+        <div class="col-xs-12  col-md-12  stepsHolder">
+            <div class="col-md-12 well setup-content" id="step-2">
+               
+                  <div class="col-md-12">
+                
+            	<div class="box text-center">
+					<input type="file" name="avatarMedico" id="avatarMedico" class="inputfile" data-multiple-caption="{count} files selected"  />
+					<label for="avatarMedico" class="inputfileLabel"><i class="fa fa-cloud-upload" aria-hidden="true"></i> <span class="btn btn-outline-info">Escolha uma foto</span></label>
+				</div>
+                
+                </div>
+                      <div class="col-md-6 text-left">
+                          <button id="" class="btn btn-outline-secondary"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Voltar</button>
+                    <button id="activate-step-3" class="btn btn-primary colorBase ">Continuar <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    
+                    </div>
+                    
+                      <div class="col-md-6 text-right">
+                    
+                   <!--   <button id="activate-step-2" class="btn btn-primary btn-lg">Próximo</button>-->
+                    
+                    </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12  col-md-12  stepsHolder">
+            <div class="col-md-12 well setup-content" id="step-3">
+      
+               <div class="row">
+<div class="col-md-6">
+             
+                   
+                   </div>
+                   
+                   <div class="col-md-6 text-right">
+                <button class="btn btn-info colorBase"> Adicionar Especialidade</button>
+                   
+                   </div>
+                 <div class="col-md-6">
+                   <label for="conselho">Selecione a Especialidade</label>
+                 <select class="form-control" name="conselho">
+                    <option>Escolha uma especialidade</option>
+                     <option>Médico - Acupuntura</option>
+                      <option>Médico - Cardiologia</option>
+                      <option>Médico - Dermatologia</option>
+                </select>
+                
+                   
+                   
+                   
+                   </div>
+                   
+                    <div class="col-md-6">
+                         <label for="conselho">RQE</label>
+            <div class="input-group ">
+                <div class="input-group-addon"> RQE</div>
+                   <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Nome do Profissional">
+                             </div>
+            
+                </div>
+                
+                <div class="col-md-12">
+                   <h4 class="mtop20 bb1">Área de Atuação</h4>
+                    <div class="row bb1">
+                    <div class="col-md-1 ">
+                        
+                       <div class="form-check">
+    <label class="form-check-label">
+      <input type="checkbox" class="form-check-input">
+     
+    </label>
+  </div>
+                        </div>
+                    <div class="col-md-6 espname"> Nome subsespecialidade</div>
+                    <div class="col-md-5">       <div class="input-group ">
+                <div class="input-group-addon"> RQE</div>
+                   <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Nome do Profissional">
+                             </div>
+             </div>
+                    </div>
+                                     <div class="row bb1">
+                    <div class="col-md-1 ">
+                        
+                  <div class="form-check">
+    <label class="form-check-label">
+      <input type="checkbox" class="form-check-input">
+  
+    </label>
+  </div>
+                        </div>
+                    <div class="col-md-6 espname"> Nome subsespecialidade</div>
+                    <div class="col-md-5">       <div class="input-group ">
+                <div class="input-group-addon"> RQE</div>
+                   <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Nome do Profissional">
+                             </div>
+             </div>
+                    </div>
+                           
+                   </div>
+                 
+                </div>
+                          <div class="col-md-6 mtop20 text-left">
+                          <button id="#" class="btn btn-outline-secondary"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Voltar</button>
+                    <button id="activate-step-4" class="btn btn-primary colorBase ">Continuar <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    
+                    </div>
+                    
+                      <div class="col-md-6 mtop20 text-right">
+                    
+                   <!--   <button id="activate-step-2" class="btn btn-primary btn-lg">Próximo</button>-->
+                    
+                    </div>
+            </div>
+            
+        </div>
+    </div>
+           <div class="row">
+        <div class="col-xs-12  col-md-12  stepsHolder">
+            <div class="col-md-12 well setup-content" id="step-4">
+                <h1 class="text-center"> 4</h1>
+            </div>
+        </div>
+    </div>
+           <div class="row">
+        <div class="col-xs-12  col-md-12 stepsHolder">
+            <div class="col-md-12 well setup-content" id="step-5">
+                <h1 class="text-center"> 5</h1>
+            </div>
+        </div>
+    </div>
+  
+       
+       
+              </div>
+              
+          
+     
+          
+ 
+     
+
+
+
+      <hr>
+
+      <footer>
+          
+          <div class="container">
+          <div class="row">
+              
+      <div class="col-md-4">
+          <h3>Cidades</h3>
+          <ul>
+          
+          <li> <A href="#">Rio de Janeiro</A> </li>
+          <li> <A href="#">São Paulo</A> </li>
+              <li> <A href="#">Belo Horizonte</A> </li>
+            <li> <A href="#">Salvador</A> </li>
+              
+            <li> <A href="#">Vitória</A> </li>
+              
+              <li><A href="#">Brasília</A> </li>
+              
+              
+              
+          </ul>
+              
+              </div>      
+       <div class="col-md-4">
+                <h3>Especialidades</h3>
+
+             <ul>
+           <li><A href="#">Ginecologista</A> </li>
+           <li><A href="#">Dermatologista</A></li>
+           <li><A href="#">Ortopedista</A></li>
+           <li><A href="#">Oftalmologista</A></li>
+           <li><A href="#">Clínico Geral</A></li>
+           <li><A href="#">Cardiologista</A></li>
+           <li><A href="#">Dentista</A></li>
+           <li><A href="#">Nutricionista</A></li>
+           </ul>
+              </div>    
+        <div class="col-md-4">
+                <h3>Sobre Nós</h3>
+              <ul>
+            <li><A href="#"> O que é</A></li>
+            <li><A href="#">Dúvidas</A></li>
+            <li><A href="#">Termos de uso</A></li>
+            <li><A href="#">Política de privacidade</A></li>
+            <li><A href="#">Entre em contato</A></li>
+            <li><A href="#">Doutor Já para empresas</A></li>
+            <li><A href="#">Quer trabalhar conosco?</A></li>
+            
+            </ul>
+            
+              </div>    
+        </div>
+          
+          </div>
+          <div class="container-flui mtop20 blueBg dark">
+       <div class="container"> <p>&copy; Company 2017</p></div>
+              
+              </div>
+      </footer>
+   <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+
+    <script src="js/bootstrap.min.js"></script>
+      
+    <script src="js/custom-file-input.js"></script>
+
+      <!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content p30">
+       <h3 class="text-center"> Entrar</h3>
+  
+      <div class="modal-body">
+      
+             
+    
+          
+          <div class="contentModal">
+              
+               <div class="text-center"> 
+         <p> <button class="btn btn-lg faceBtn"><i class="fa fa-facebook-square mr-auto" aria-hidden="true"></i>   Entrar com Facebook</button></p>
+          <p>  <button class="btn btn-lg googleBtn"><i class="fa fa-google-plus" aria-hidden="true"></i>  Entrar com Google</button></p>
+          </div>
+          <p><span class="textModal">Criando minha conta, eu concordo com os <a href="#">Termos e condições</a>.</span></p>
+                <hr/>
+              
+              
+              <h4 class="smallTit">ENTRAR COM MEU E-MAIL</h4>
+         <form>
+  <div class="form-row align-items-center">
+    <div class="col-md-12">
+   
+  <div class="input-group mb-2 mb-sm-0">
+      <div class="input-group-addon"> <i class="fa fa-envelope" aria-hidden="true"></i> 
+</div>
+        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="E-mail">
+      </div>
+    </div>
+    <div class="col-md-12">
+      <label class="sr-only" for="inlineFormInputGroup">Username</label>
+      <div class="input-group mb-2 mb-sm-0">
+        <div class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></div>
+        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="senha">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-check mb-2 mb-sm-0 lembreMe">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox"> Permanecer logado 
+        </label>
+      </div>
+    </div>
+      
+  
+    <div class="col-md-12">
+      <button type="submit" class="btn btn-primary btnLogin colorBase">Entrar</button>
+        <div class="otherText pt20">
+        <p>Ainda não tem cadastro?<A href="#" data-toggle="modal" data-target="#cadastroModal"> clique aqui!</A></p> 
+        <p><A href="#"> Esqueceu sua Senha</A></p> 
+        </div>
+    </div>
+      
+      
+    
+  </div>
+</form>
+              
+              
+               
+          </div>
+
+      </div>
+     
+      
+
+    </div>
+  </div>
+</div>
+      
+      
+      <div class="modal fade" id="cadastroModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content p30">
+      
+       <h3 class="text-center"> Criar Conta</h3>
+  
+      <div class="modal-body">
+      
+             
+    
+          
+          <div class="contentModal">
+                 <p class="text-center"><span class="textModal ">Se deseja cadastrar seu consultório <a href="#">clique aqui</a>.</span></p>
+               <div class="text-center"> 
+         <p> <button class="btn btn-lg faceBtn"><i class="fa fa-facebook-square mr-auto" aria-hidden="true"></i>   Entrar com Facebook</button></p>
+          <p>  <button class="btn btn-lg googleBtn"><i class="fa fa-google-plus" aria-hidden="true"></i>  Entrar com Google</button></p>
+          </div>
+          <p><span class="textModal">Criando minha conta, eu concordo com os <a href="#">Termos e condições</a>.</span></p>
+                <hr/>
+              
+              
+              <h4 class="smallTit">CRIAR CONTA COM MEU E-MAIL</h4>
+         <form>
+  <div class="form-row align-items-center">
+    <div class="col-md-12">
+   
+  <div class="input-group mb-2 mb-sm-0">
+      <div class="input-group-addon"> <i class="fa fa-envelope" aria-hidden="true"></i> 
+</div>
+        <input type="email" class="form-control" id="inlineFormInputGroup" placeholder="E-mail">
+      </div>
+    </div>
+      
+          <div class="col-md-12">
+   
+  <div class="input-group mb-2 mb-sm-0">
+      <div class="input-group-addon"> <i class="fa fa-user" aria-hidden="true"></i> 
+</div>
+        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Nome Completo">
+      </div>
+    </div>
+      
+      
+             <div class="col-md-12">
+   
+  <div class="input-group mb-2 mb-sm-0">
+      <div class="input-group-addon"> <i class="fa fa-calendar" aria-hidden="true"></i> 
+</div>
+        <input type="text" class="form-control" id="inlineFormInputGroup" onblur="(this.type='text')"  onfocus="(this.type='date')" placeholder="Data de nascimento">
+      </div>
+    </div>
+      <div class="col-md-12 mtop20">
+      
+    <div data-toggle="buttons" class="btn-group btn-group-justified fancy-radio-group">
+  <label class="btn btn-fancy-radio text-xs text-no-transform clearfix"> <img src="images/radio/empty.gif" class="normal"/> <img src="images/radio/cked.gif" class="checked" />
+    <input type="radio" class="hidden" name="options"> Feminino
+        </label>
+            <label class="btn btn-fancy-radio text-xs text-no-transform clearfix"> <img src="images/radio/empty.gif" class="normal"/> <img src="images/radio/cked.gif" class="checked" />
+    <input type="radio" class="hidden" name="options">Masculino
+        </label>
+          
+          </div>
+      </div>
+      
+    <div class="col-md-12">
+      <label class="sr-only" for="inlineFormInputGroup">Username</label>
+      <div class="input-group mb-2 mb-sm-0">
+        <div class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></div>
+        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="senha">
+         
+      </div> <small class="legenda"> Sua senha deve ter ao menos 6 caracteres</small>
+    </div>
+
+      
+  
+    <div class="col-md-12">
+      <button type="submit" class="btn btn-primary btnLogin colorBase">Cadastrar</button>
+        <div class="otherText pt20">
+       
+        <p><A href="#"> Esqueceu sua Senha</A></p> 
+        </div>
+    </div>
+      
+      
+    
+  </div>
+</form>
+              
+              
+               
+          </div>
+
+      </div>
+     
+      
+
+    </div>
+  </div>
+</div>
+      
+      
+<script>
+/*$(".ctype").change(function() {
+    var status = $(this).val();
+   //alert($(this).val());
+    if (status == "fisico") {
+        
+         $("#fisico").style.display = 'none';
+        $("#juridico").style.display = 'block';
+       
+ 
+    } else if (status == "juridico"){
+               $("#juridico").style.display = 'block';
+        $("#fisico").style.display = 'none';
+    }
+});   */
+    
+    
+    
+    $(document).ready(function() {
+    
+    var navListItems = $('ul.setup-panel li a'),
+        allWells = $('.setup-content');
+
+    allWells.hide();
+
+    navListItems.click(function(e)
+    {
+        e.preventDefault();
+        var $target = $($(this).attr('href')),
+            $item = $(this).closest('li');
+        
+        if (!$item.hasClass('disabled')) {
+            navListItems.closest('li').removeClass('active');
+            $item.addClass('active');
+            allWells.hide();
+            $target.show();
+        }
+    });
+    
+    $('ul.setup-panel li.active a').trigger('click');
+    
+    // DEMO ONLY //
+    $('#activate-step-2').on('click', function(e) {
+        $('ul.setup-panel li:eq(1)').removeClass('disabled');
+        $('ul.setup-panel li a[href="#step-2"]').trigger('click');
+        $(this).remove();
+    })    
+        
+        $('#activate-step-3').on('click', function(e) {
+            $('ul.setup-panel li:eq(2)').removeClass('disabled');
+            $('ul.setup-panel li a[href="#step-3"]').trigger('click');
+            $(this).remove();
+    })    
+        
+                $('#activate-step-4').on('click', function(e) {
+            $('ul.setup-panel li:eq(3)').removeClass('disabled');
+            $('ul.setup-panel li a[href="#step-4"]').trigger('click');
+            $(this).remove();
+    })    
+        
+        
+                $('#activate-step-5').on('click', function(e) {
+            $('ul.setup-panel li:eq(4)').removeClass('disabled');
+            $('ul.setup-panel li a[href="#step-5"]').trigger('click');
+            $(this).remove();
+    })    
+        
+        
+        
+        /* imagem */
+        
+});
+
+
+</script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+   
+  </body>
+</html>

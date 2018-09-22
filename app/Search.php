@@ -16,7 +16,7 @@ class Search extends Model {
 			                   [ 'professionals.active', 1 ]
 		                   ] );
 
-		$procedures = DB::table( 'procedures' )
+		$procedures = DB::table( 'services' )
 		                ->select( DB::raw( 'id, name, "4"result_type' ) )
 		                ->where( [
 			                [ 'name', 'like', '%' . $keyword . '%' ],
@@ -77,6 +77,38 @@ class Search extends Model {
 		         ->where( [
 			         [ 'location', $location ],
 		         ] )
-		         ->get()->first();
+		         ->first();
+	}
+
+
+	static public function search( $specialty_id, $latlng, $filters = [ 'max_distance' => 45, 'gender' => false ] ) {
+		$where = '';
+		if ( $filters['gender'] ) {
+			$where .= " AND users.gender_id = {$filters['gender']}";
+		}
+
+		return DB::select( "
+				SELECT 
+				professionalxspecialty . specialty_id,
+	        	professionalxspecialty . registration,
+           		professionalxspecialty . emissor_state,
+		      	professionals . id,
+		        users . name,
+		        medical_places.name,
+				( 6371 * acos( cos( radians({$latlng['lat']}) ) * cos( radians( medical_places.lat ) ) * 
+				cos( radians( medical_places.lng ) - radians({$latlng['lng']}) ) + sin( radians({$latlng['lat']}) ) * 
+				sin( radians( medical_places.lat ) ) ) ) AS distance 
+				FROM professionals
+					INNER JOIN professionalxspecialty ON professionalxspecialty.professional_id = professionals.id 
+					INNER JOIN users ON users.id = professionals.user_id
+					INNER JOIN medical_placexprofessional ON medical_placexprofessional.professional_id = professionals.id
+					INNER JOIN medical_places ON medical_placexprofessional.location_id = medical_places.id
+				WHERE professionalxspecialty.specialty_id = {$specialty_id}
+				{$where} 
+				GROUP BY medical_places.id,professionals.id, professionalxspecialty.id, medical_placexprofessional.id
+				HAVING distance < {$filters['max_distance']} 
+				ORDER BY distance;
+		" );
+//GROUP BY professionals.id,professionalxspecialty.id,medical_placexprofessional.id
 	}
 }

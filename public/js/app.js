@@ -41895,10 +41895,13 @@ module.exports = function spread(callback) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Home_vue__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Home_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_Home_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Search_vue__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Search_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_Search_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_NotFound_vue__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_NotFound_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_NotFound_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ProfessionalRegister_vue__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_ProfessionalRegister_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_ProfessionalRegister_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Search_vue__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Search_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_Search_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_NotFound_vue__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_NotFound_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_NotFound_vue__);
+
 
 
 
@@ -41913,18 +41916,22 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_
         name: 'Home',
         component: __WEBPACK_IMPORTED_MODULE_2__components_Home_vue___default.a
     }, {
+        path: '/register/professional',
+        name: 'RegisterProfessional',
+        component: __WEBPACK_IMPORTED_MODULE_3__components_ProfessionalRegister_vue___default.a
+    }, {
         path: '/search/:term?/:location?/:payment?',
         name: 'Search',
         props: true,
-        component: __WEBPACK_IMPORTED_MODULE_3__components_Search_vue___default.a
+        component: __WEBPACK_IMPORTED_MODULE_4__components_Search_vue___default.a
     }, {
         path: '/404',
         name: '404',
-        component: __WEBPACK_IMPORTED_MODULE_4__components_NotFound_vue___default.a
+        component: __WEBPACK_IMPORTED_MODULE_5__components_NotFound_vue___default.a
     }, {
         path: '/*',
         name: 'Not Found',
-        component: __WEBPACK_IMPORTED_MODULE_4__components_NotFound_vue___default.a
+        component: __WEBPACK_IMPORTED_MODULE_5__components_NotFound_vue___default.a
     }]
 }));
 
@@ -44502,6 +44509,194 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -44514,21 +44709,273 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  return _c('div', [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _vm._m(3), _vm._v(" "), _c('hr'), _vm._v(" "), _c('footer', [_c('div', {
     staticClass: "container"
   }, [_c('div', {
     staticClass: "row"
   }, [_c('div', {
-    staticClass: "col-md-8 col-md-offset-2"
+    staticClass: "col-md-4"
+  }, [_c('h3', [_vm._v("Cidades")]), _vm._v(" "), _c('ul', [_c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Rio de Janeiro")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("São Paulo")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Belo Horizonte")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Salvador")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Vitória")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Brasília")])], 1)])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-4"
+  }, [_c('h3', [_vm._v("Especialidades")]), _vm._v(" "), _c('ul', [_c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Ginecologista")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Dermatologista")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Ortopedista")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Oftalmologista")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Clínico Geral")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Cardiologista")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Dentista")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Nutricionista")])], 1)])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-4"
+  }, [_c('h3', [_vm._v("Sobre Nós")]), _vm._v(" "), _c('ul', [_c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v(" O que é")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Dúvidas")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Termos de uso")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Política de privacidade")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Entre em contato")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Doutor Já para empresas")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Quer trabalhar conosco?")])], 1)])])])]), _vm._v(" "), _vm._m(4)])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "header"
   }, [_c('div', {
-    staticClass: "panel panel-default"
+    staticClass: "container"
+  }, [_c('nav', {
+    staticClass: "navbar navbar-expand-md navbar-transparent dark bg-dark"
+  }, [_c('a', {
+    staticClass: "navbar-brand",
+    attrs: {
+      "href": "#"
+    }
+  }, [_c('img', {
+    staticClass: "mainLogo",
+    attrs: {
+      "src": "img/logo_full_white.png"
+    }
+  })]), _vm._v(" "), _c('button', {
+    staticClass: "navbar-toggler",
+    attrs: {
+      "type": "button",
+      "data-toggle": "collapse",
+      "data-target": "#navbarsExampleDefault",
+      "aria-controls": "navbarsExampleDefault",
+      "aria-expanded": "false",
+      "aria-label": "Toggle navigation"
+    }
+  }, [_c('span', {
+    staticClass: "navbar-toggler-icon"
+  }, [_c('i', {
+    staticClass: "fa fa-bars",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "collapse navbar-collapse",
+    attrs: {
+      "id": "navbarsExampleDefault"
+    }
+  }, [_c('ul', {
+    staticClass: "navbar-nav mr-auto"
+  }), _vm._v(" "), _c('form', {
+    staticClass: "form-inline my-2 my-lg-0"
+  }, [_c('button', {
+    staticClass: "btn btn-outline-warning my-2 my-sm-0",
+    attrs: {
+      "type": "submit"
+    }
+  }, [_vm._v("Profissional da saúde? Clique\n                            aqui!\n                        ")])])])])]), _vm._v(" "), _c('div', {
+    staticClass: "jumbotron"
   }, [_c('div', {
-    staticClass: "panel-heading"
-  }, [_vm._v("Example Component")]), _vm._v(" "), _c('div', {
-    staticClass: "panel-body"
-  }, [_vm._v("\n                    I'm an example component!\n                ")])])])])])
+    staticClass: "container"
+  }, [_c('h2', {
+    staticClass: "display-4 text-center hWhite"
+  }, [_vm._v("Procurando atendimento perto de você?")]), _vm._v(" "), _c('h5', {
+    staticClass: "text-center"
+  }, [_vm._v("Faça seu agendamento online:")]), _vm._v(" "), _c('div', {
+    staticClass: "row formHomeHolder"
+  }, [_c('div', {
+    staticClass: "col-md-3 whiteBg homeForm"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "col-md-3 whiteBg homeForm"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "col-md-3 whiteBg homeForm"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "col-md-2 homeForm"
+  }, [_c('button', {
+    staticClass: "btn btn-block btn-success btn-full",
+    attrs: {
+      "type": "submit"
+    }
+  }, [_vm._v("Buscar")])])])])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "row p30"
+  }, [_c('div', {
+    staticClass: "col-md-4 text-center boxed"
+  }, [_c('img', {
+    attrs: {
+      "src": "img/h1.png"
+    }
+  }), _vm._v(" "), _c('h2', {
+    staticClass: "text-center p20"
+  }, [_vm._v("Encontre um profissional")]), _vm._v(" "), _c('p', {
+    staticClass: "text-left"
+  }, [_vm._v("Escolha entre milhares de Médicos, Dentistas e Profissionais de Saúde a\n                        especialidade que você procura, sempre pertinho de você ")])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-4 text-center boxed"
+  }, [_c('img', {
+    attrs: {
+      "src": "img/h2.png"
+    }
+  }), _vm._v(" "), _c('h2', {
+    staticClass: "text-center p20"
+  }, [_vm._v("Você escolhe dia e horário")]), _vm._v(" "), _c('p', {
+    staticClass: "text-left"
+  }, [_vm._v("Todas as consultas tem hora marcada, e é você que escolhe o dia e a hora. O poder\n                        está com você! ")])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-4 text-center boxed"
+  }, [_c('img', {
+    attrs: {
+      "src": "img/h3.png"
+    }
+  }), _vm._v(" "), _c('h2', {
+    staticClass: "text-center p20"
+  }, [_vm._v("Forma de Pagamento")]), _vm._v(" "), _c('p', {
+    staticClass: "text-left"
+  }, [_vm._v("Você está no comando, então escolha o profissional pelo plano de saúde ou valor da\n                        consulta que você pode pagar. ")])])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "containder-fluid blueBg dark showApp"
+  }, [_c('div', {
+    staticClass: "container p20"
+  }, [_c('div', {
+    staticClass: "row "
+  }, [_c('div', {
+    staticClass: "col-md-5"
+  }, [_c('img', {
+    staticClass: "floating",
+    attrs: {
+      "src": "img/app.png"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-7"
+  }, [_c('h3', {
+    staticClass: "hWhite"
+  }, [_vm._v("O mesmo aplicativo apresenta a interface de busca de profissionais para o paciente, e\n                        o gerenciamento de agenda e consultas para o profissional, tornando o processo mais transparente\n                        para ambos.")]), _vm._v(" "), _c('p', [_vm._v("Você ganha mais um canal para seus pacientes te encontrarem e eles a comodidade de ótimos\n                        especialistas na ponta dos dedos.")]), _vm._v(" "), _c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-md-6 text-right"
+  }, [_c('img', {
+    staticClass: "dBtn",
+    attrs: {
+      "src": "img/gplay.png"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-6 text-left"
+  }, [_c('img', {
+    staticClass: "dBtn",
+    attrs: {
+      "src": "img/aplay.png"
+    }
+  })])])])])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "container p80 text-center"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-md-3"
+  }, [_c('img', {
+    attrs: {
+      "src": "img/sdoctor.png"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-9"
+  }, [_c('h3', {
+    staticClass: "mtop40"
+  }, [_vm._v(" Busque seu médico por localidade, proximidade, planos de saúde e especialidade, tudo\n                    isso na palma da sua mão.")]), _vm._v(" "), _c('p', {
+    staticClass: "text-left mtop40"
+  }, [_vm._v("Transformamos a forma de relacionamento entre médico e paciente, trazendo a você\n                    a facilidade que faltava e a seu medico a praticidade que ele buscava. Controle seus alarmes de\n                    medicamentos, verifique as melhores drogarias para adquirir os itens da sua receita e ainda receba dicas\n                    dos laboratórios mais perto de você que oferecem o exame que seu médico acabou de lhe prescrever. ")]), _vm._v(" "), _c('a', {
+    staticClass: "btn btn-outline-success mtop20",
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v(" É profissional da saúde? Clique aqui!")])])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "container-flui mtop20 blueBg dark"
+  }, [_c('div', {
+    staticClass: "container"
+  }, [_c('p', [_vm._v("© Company 2017")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -44611,6 +45058,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         this.location = p.location;
         this.payment = p.payment;
         this.term = p.term;
+        console.log(p);
     },
     data: function data() {
         return {
@@ -44849,6 +45297,900 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var Component = __webpack_require__(1)(
+  /* script */
+  __webpack_require__(62),
+  /* template */
+  __webpack_require__(63),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/Users/MaiaVinicius/Documents/dev/guiaconsulta-web/resources/assets/js/components/ProfessionalRegister.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] ProfessionalRegister.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-69346c40", Component.options)
+  } else {
+    hotAPI.reload("data-v-69346c40", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 62 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    mounted: function mounted() {
+        console.log('Component mounted.');
+    }
+});
+
+/***/ }),
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-md-3 hidden-xs"
+  }), _vm._v(" "), _c('div', {
+    staticClass: "col-md-6 col-xs-12 col-sm-6 p20"
+  }, [_c('h3', {
+    staticClass: "text-center"
+  }, [_vm._v(" Monte seu Perfil!")]), _vm._v(" "), _c('P', {
+    staticClass: "text-center"
+  }, [_vm._v("Não há custo para usar. Porque não testar?")]), _vm._v(" "), _c('div', {
+    staticClass: "bs row"
+  }, [_c('Div', {
+    staticClass: "col-md-12"
+  }, [_c('h5', {
+    staticClass: "subLine"
+  }, [_vm._v("Dados da Conta")]), _vm._v(" "), _c('div', {
+    staticClass: "btn-group btn-group-justified fancy-radio-group",
+    attrs: {
+      "data-toggle": "buttons"
+    }
+  }, [_c('label', {
+    staticClass: "btn btn-fancy-radio text-xs text-no-transform clearfix"
+  }, [_c('img', {
+    staticClass: "normal",
+    attrs: {
+      "src": "images/radio/empty.gif"
+    }
+  }), _vm._v(" "), _c('img', {
+    staticClass: "checked",
+    attrs: {
+      "src": "images/radio/cked.gif"
+    }
+  }), _vm._v(" "), _c('input', {
+    staticClass: "hidden ctype",
+    attrs: {
+      "type": "radio",
+      "name": "ctype",
+      "value": "fisico"
+    }
+  }), _vm._v(" Pessoa Física\n                            ")]), _vm._v(" "), _c('label', {
+    staticClass: "btn btn-fancy-radio text-xs text-no-transform clearfix"
+  }, [_c('img', {
+    staticClass: "normal",
+    attrs: {
+      "src": "images/radio/empty.gif"
+    }
+  }), _vm._v(" "), _c('img', {
+    staticClass: "checked",
+    attrs: {
+      "src": "images/radio/cked.gif"
+    }
+  }), _vm._v(" "), _c('input', {
+    staticClass: "hidden ctype",
+    attrs: {
+      "type": "radio",
+      "name": "ctype",
+      "value": "juridico"
+    }
+  }), _vm._v("Pessoa Jurídica\n                            ")])])]), _vm._v(" "), _c('Div', {
+    staticClass: "col-md-12"
+  }, [_c('div', {
+    staticClass: "pesFisica",
+    staticStyle: {
+      "display": "block"
+    },
+    attrs: {
+      "id": "fisico"
+    }
+  }, [_c('div', {
+    staticClass: "input-group  mb-sm-0 mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-user",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "Nome Completo"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "input-group mb-sm-0 mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-address-card",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "CPF"
+    }
+  })])])]), _vm._v(" "), _vm._m(2), _vm._v(" "), _vm._m(3), _vm._v(" "), _vm._m(4), _vm._v(" "), _vm._m(5), _vm._v(" "), _vm._m(6), _vm._v(" "), _vm._m(7), _vm._v(" "), _vm._m(8), _vm._v(" "), _vm._m(9), _vm._v(" "), _vm._m(10), _vm._v(" "), _vm._m(11), _vm._v(" "), _vm._m(12), _vm._v(" "), _vm._m(13), _vm._v(" "), _vm._m(14), _vm._v(" "), _vm._m(15), _vm._v(" "), _vm._m(16), _vm._v(" "), _vm._m(17)], 1)], 1)])]), _vm._v(" "), _c('hr'), _vm._v(" "), _c('footer', [_c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "col-md-4"
+  }, [_c('h3', [_vm._v("Cidades")]), _vm._v(" "), _c('ul', [_c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Rio de Janeiro")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("São Paulo")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Belo Horizonte")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Salvador")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Vitória")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Brasília")])], 1)])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-4"
+  }, [_c('h3', [_vm._v("Especialidades")]), _vm._v(" "), _c('ul', [_c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Ginecologista")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Dermatologista")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Ortopedista")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Oftalmologista")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Clínico Geral")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Cardiologista")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Dentista")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Nutricionista")])], 1)])]), _vm._v(" "), _c('div', {
+    staticClass: "col-md-4"
+  }, [_c('h3', [_vm._v("Sobre Nós")]), _vm._v(" "), _c('ul', [_c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v(" O que é")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Dúvidas")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Termos de uso")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Política de privacidade")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Entre em contato")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Doutor Já para empresas")])], 1), _vm._v(" "), _c('li', [_c('A', {
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Quer trabalhar conosco?")])], 1)])])])]), _vm._v(" "), _vm._m(18)])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "header header-blue"
+  }, [_c('div', {
+    staticClass: "container-fluid"
+  }, [_c('nav', {
+    staticClass: "navbar navbar-expand-md navbar-transparent dark bg-dark"
+  }, [_c('a', {
+    staticClass: "navbar-brand",
+    attrs: {
+      "href": "#"
+    }
+  }, [_c('img', {
+    staticClass: "mainLogo",
+    attrs: {
+      "src": "img/logo_full_white.png"
+    }
+  })]), _vm._v(" "), _c('button', {
+    staticClass: "navbar-toggler",
+    attrs: {
+      "type": "button",
+      "data-toggle": "collapse",
+      "data-target": "#navbarsExampleDefault",
+      "aria-controls": "navbarsExampleDefault",
+      "aria-expanded": "false",
+      "aria-label": "Toggle navigation"
+    }
+  }, [_c('span', {
+    staticClass: "navbar-toggler-icon dark"
+  }, [_c('i', {
+    staticClass: "fa fa-bars",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })])]), _vm._v(" "), _c('div', {
+    staticClass: "collapse navbar-collapse ",
+    attrs: {
+      "id": "navbarsExampleDefault"
+    }
+  }, [_c('ul', {
+    staticClass: "navbar-nav ml-auto "
+  }, [_c('li', {
+    staticClass: "nav-item active"
+  }, [_c('a', {
+    staticClass: "nav-link",
+    attrs: {
+      "href": "#"
+    }
+  }, [_vm._v("Baixe Nosso App!")])]), _vm._v(" "), _c('li', {
+    staticClass: "nav-item"
+  }, [_c('a', {
+    staticClass: "nav-link",
+    attrs: {
+      "href": "#",
+      "data-toggle": "modal",
+      "data-target": "#cadastroModal"
+    }
+  }, [_vm._v("Cadastrar Consultório")])]), _vm._v(" "), _c('li', {
+    staticClass: "nav-item"
+  }, [_c('a', {
+    staticClass: "nav-link",
+    attrs: {
+      "href": "#",
+      "data-toggle": "modal",
+      "data-target": "#loginModal"
+    }
+  }, [_vm._v("Entrar")])])])])])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "container-fluid greyBg"
+  }, [_c('div', {
+    staticClass: "row p20 text-center"
+  }, [_c('div', {
+    staticClass: "col-md-12"
+  }, [_c('h3', [_vm._v(" Adquira mais pacientes para sua clínica ou consultório")])])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-12"
+  }, [_c('h5', {
+    staticClass: "subLine mtop20"
+  }, [_vm._v("Dados do Consultório")]), _vm._v(" "), _c('span', {
+    staticClass: "legenda"
+  }, [_vm._v("* Nessa etapa de cadastro, é necessário informar o endereço de apenas um dos seus consultórios.")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-6"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-tag",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "CEP"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-12"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-map-marker",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "Endereço"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-5"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-map-marker",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "Número"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-7"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-map-marker",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "Complemento"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-12"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-map-marker",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "Bairro"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-7"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-map-marker",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "Cidade"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-5"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-map-marker",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "Estado"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-4"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-phone",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "DDD"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-8"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-phone",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "Telefone do Consultório"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-12 mtop20"
+  }, [_c('h5', {
+    staticClass: "subLine"
+  }, [_vm._v("Acesso do Adminsitrador")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-12"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-envelope",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "E-mail"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-12"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-envelope",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "password",
+      "placeholder": "Senha"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-4"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-phone",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "DDD"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-8"
+  }, [_c('div', {
+    staticClass: "input-group  mtop20"
+  }, [_c('div', {
+    staticClass: "input-group-addon"
+  }, [_c('i', {
+    staticClass: "fa fa-phone",
+    attrs: {
+      "aria-hidden": "true"
+    }
+  })]), _vm._v(" "), _c('input', {
+    staticClass: "form-control",
+    attrs: {
+      "type": "text",
+      "placeholder": "Telefone do Administrador"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "col-md-12 p30 text-right"
+  }, [_c('button', {
+    staticClass: "btn btn-success"
+  }, [_vm._v("Continuar")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "container-flui mtop20 blueBg dark"
+  }, [_c('div', {
+    staticClass: "container"
+  }, [_c('p', [_vm._v("© Company 2017")])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-69346c40", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

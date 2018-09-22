@@ -41,10 +41,17 @@ Route::get( 'search/{keyword?}/{location?}/{payment?}',
 	[ 'as' => 'login', 'uses' => 'SearchController@search' ] );
 
 
-Route::get( '/posts', 'PostsController@index' );
-
 Route::get( '/specialties', 'SpecialtiesController@index' );
 
 Route::get( '/search-term/{keyword}', 'SearchController@searchTerm' );
 
-Route::get( '/insurances', 'InsurancesController@index' );
+Route::prefix( 'resource/{resource?}' )->group( function () {
+	Route::get( 'search/{keyword?}', [ 'uses' => 'ResourceController@search' ] );
+	Route::get( 'get-logs/{id}', [ 'uses' => 'ResourceController@getLogs' ] );
+
+	Route::get( 'get/{id}', [ 'uses' => 'ResourceController@get' ] );
+	Route::get( 'get-form/', [ 'uses' => 'ResourceController@getForm' ] );
+	Route::post( 'create/', [ 'uses' => 'ResourceController@create' ] );
+	Route::delete( 'remove/{id}', [ 'uses' => 'ResourceController@remove' ] );
+	Route::put( 'update/{id}', [ 'uses' => 'ResourceController@update' ] );
+} );

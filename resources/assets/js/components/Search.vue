@@ -25,6 +25,7 @@
             this.location = p.location;
             this.payment = p.payment;
             this.term = p.term;
+            console.log(p);
         },
         data () {
             return {

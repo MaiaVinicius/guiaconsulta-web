@@ -1,0 +1,62 @@
+.setup-panel li{ text-align: center; padding:10px 0 0 0 ;}
+
+.wizard .nav-pills li{background:#eee; border:1px solid #fff; width: 20%; border-radius:20px 20px 0 0}
+.setup-content{border:1px solid #eee; padding:15px}
+
+.wizard .nav-pills li .btn-info{background:#888; border:1px solid #888; }
+
+.wizard .nav-pills li.active .btn-info{background:#2d9cd7;border:1px solid #1c719e;}
+
+.active{background:#fff !important; border:1px solid #eee!important; color:#2d9cd7}
+.active a{color:#2d9cd7}
+
+.wizard .nav-pills a:hover{color:#2d9cd7; text-decoration:none;}
+.btn-info{background:#2d9cd7;}
+
+/* subir imagem */
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfileLabel i{font-size:60px; display: block; width: 120px; height: 120px; background:#2d9cd7; color:#fff; padding:30px; text-align: center;border-radius:100%; margin: 0 auto; margin-bottom: 20px}
+
+
+/*fim subir imagem */
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
+
+.setup-content input, .setup-content select, .setup-content textarea{border-radius:0}
+
+.bb1{border-bottom: 1px solid #ccc; padding: 8px 0}
+
+.espname{padding:5px 0}
+.form-check{margin:8px !important; margin-bottom: 0 !important;}

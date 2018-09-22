@@ -18,7 +18,7 @@ class SearchController extends Controller {
 
 
 	function search( $keyword = false, $location = false, $payment = false ) {
-		$s = Specialty::where( 'specialist', 'like', '%' . $keyword . '%' )->get();
+		$specialty = Specialty::where( 'specialist', 'like', '%' . $keyword . '%' )->first();
 
 
 		if ( $locationCache = Search::getLatLngCache( $location ) ) {
@@ -26,12 +26,21 @@ class SearchController extends Controller {
 		} else {
 			$latlng = $this->addressToLatLng( $location );
 		}
+		$latlng = $this->treatLatLng( $latlng );
+
+		$result = Search::search( $specialty["id"], $latlng );
+
+		Search::saveLog( $keyword, $latlng, $location, count( $result ) );
 
 
-		Search::saveLog( $keyword, $latlng, $location, 0 );
+		return response()->json( [ 'specialty' => $specialty, 'location' => $latlng, 'result' => $result ] );
+	}
 
+	function treatLatLng( $latlng ) {
+		$latlng['lat'] = floatval( $latlng['lat'] );
+		$latlng['lng'] = floatval( $latlng['lng'] );
 
-		return response()->json( ['s' => $s, 'location' => $latlng ] );
+		return $latlng;
 	}
 
 

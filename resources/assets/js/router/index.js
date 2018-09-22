@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './../components/Home.vue'
+import ProfessionalRegister from './../components/ProfessionalRegister.vue'
 import Search from './../components/Search.vue'
 import NotFound from './../components/NotFound.vue'
 
@@ -12,6 +13,11 @@ export default new Router({
             path: '/',
             name: 'Home',
             component: Home
+        },
+        {
+            path: '/register/professional',
+            name: 'RegisterProfessional',
+            component: ProfessionalRegister
         },
         {
             path: '/search/:term?/:location?/:payment?',
