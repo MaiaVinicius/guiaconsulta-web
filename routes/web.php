@@ -18,8 +18,9 @@ Route::group( [ 'middleware' => 'web' ], function () {
 	} );
 
 
-	Route::get( '/{catchall?}', function ( $catchall ) {
-		return response()->redirectTo( '/#/' . $catchall );
-	} )->where( 'catchall', '(.*)' );
+    Route::get( '/{catchall?}', function ( $catchall ) {
+        return response()->redirectTo( '/#/' . $catchall );
+    } )->where( 'catchall', '(.*)' );
+
 
 } );
