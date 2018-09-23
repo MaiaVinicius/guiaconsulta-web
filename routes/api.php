@@ -55,3 +55,10 @@ Route::prefix( 'resource/{resource?}' )->group( function () {
 	Route::delete( 'remove/{id}', [ 'uses' => 'ResourceController@remove' ] );
 	Route::put( 'update/{id}', [ 'uses' => 'ResourceController@update' ] );
 } );
+
+Route::prefix( 'dependent' )->group( function () {
+
+	Route::get( 'list', [ 'uses' => 'DependentController@listAll' ] );
+	Route::post( 'create/', [ 'uses' => 'DependentController@create' ] );
+	Route::put( 'update/{id}', [ 'uses' => 'ResourceController@update' ] );
+} );

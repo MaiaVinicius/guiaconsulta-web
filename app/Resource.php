@@ -12,6 +12,9 @@ class Resource {
 	function __construct( $resource ) {
 		$this->resourceConfig = $this->getResourceConfig( $resource );
 
+		if ( ! $this->resourceConfig ) {
+			throw new \Exception( "resource {$resource} not found." );
+		}
 	}
 
 	/**
@@ -31,22 +34,37 @@ class Resource {
 	}
 
 	/**
+	 * @param $resourceId
+	 * @param bool $getOptions
+	 *
 	 * @return \stdClass
 	 */
-	private function getFields() {
+	private function getFields( $resourceId = false, $getOptions = true ) {
+		if ( ! $resourceId ) {
+			$resourceId = $this->resourceConfig->id;
+		}
+
 		$res = DB::select( "
-SELECT sf.*, subres.resource_table, subres.search_column FROM sys_fields sf 
+SELECT sf.id, sf.field_type_id, sf.label,sf.column_name,sf.default_value, 
+srf.required,
+subres.resource_table, subres.search_column 
+
+FROM sys_fields sf 
 INNER JOIN sys_resources_fields srf ON srf.field_id=sf.id
 LEFT JOIN sys_resources subres ON subres.id=sf.search_resource_id 
-WHERE srf.resource_id=?", [ $this->resourceConfig->id ] );
+WHERE srf.resource_id=?", [ $resourceId ] );
 
-		foreach ( $res as $key => $item ) {
-			if ( in_array( $item->field_type_id, [ 2, 5, 6 ] ) ) {
-				$subres = DB::table( $item->resource_table );
-				$subres->select( [ "id", $item->search_column ] );
-				$subres->limit( 100 );
+		if ( $getOptions ) {
+			foreach ( $res as $key => $item ) {
 
-				$res[ $key ]->data = $subres->get();
+				if ( in_array( $item->field_type_id, [ 2, 5, 6 ] ) ) {
+					$subres = DB::table( $item->resource_table );
+					$subres->select( [ "id", $item->search_column ] );
+					$subres->limit( 100 );
+
+
+					$res[ $key ]->options = $subres->get();
+				}
 			}
 		}
 
@@ -84,6 +102,8 @@ WHERE srf.resource_id=?", [ $this->resourceConfig->id ] );
 	/**
 	 * @param int $id
 	 *
+	 * @param bool $extends
+	 *
 	 * @return bool
 	 */
 	public function getById( $id ) {
@@ -93,6 +113,7 @@ WHERE srf.resource_id=?", [ $this->resourceConfig->id ] );
 			$t->where( [ "id" => $id ] );
 
 			$res = $t->first();
+
 
 			return $res;
 		}
@@ -143,16 +164,89 @@ WHERE srf.resource_id=?", [ $this->resourceConfig->id ] );
 		return false;
 	}
 
+	private function getChildResources() {
+		return DB::table( "sys_resources" )
+		         ->where( [
+			         "parent_id"      => $this->resourceConfig->id,
+			         "extends_parent" => 0
+		         ] )->get();
+	}
+
+	private function getResourcesToExtend( $resourceId = false ) {
+		if ( ! $resourceId ) {
+			$resourceId = $this->resourceConfig->id;
+		}
+
+		$res = DB::select( "
+SELECT r.id, r.resource_name, r.resource_table, r1.parent_column FROM sys_resources r1 
+INNER JOIN sys_resources r ON r.id=r1.parent_id 
+WHERE r1.extends_parent=1 AND r1.id=?", [ $resourceId ] );
+
+		foreach ( $res as $key => $r ) {
+
+			$_res = $this->formatResource( $this->getResourcesToExtend( $r->id ) );
+
+
+			$res[ $key ]->extends = $_res;
+
+		}
+
+		return $res;
+
+	}
+
+	private function formatFieldKeys( $fields ) {
+		$_fields = [];
+
+		foreach ( $fields as $key => $field ) {
+			if ( isset( $field->column_name ) ) {
+				$_key = $field->column_name;
+			} else {
+				$_key = $field->resource_table;
+			}
+
+			$_fields[ $_key ] = $field;
+		}
+
+		return $_fields;
+	}
+
+	function formatResource( $resource ) {
+		foreach ( $resource as $key => $childResource ) {
+			$_fields = $this->getFields( $childResource->id );
+
+			$resource[ $key ]->fields = $this->formatFieldKeys( $_fields );
+
+		}
+		$resource = $this->formatFieldKeys( $resource );
+
+		return $resource;
+	}
+
 	/**
+	 * @param bool $extends
+	 *
 	 * @return array
 	 */
-	public function getForm() {
+	public function getForm( $extends = true ) {
+
 		$fields = $this->getFields();
+
+
+		if ( $extends ) {
+//		$childResources  = $this->formatResource( $this->getChildResources() );
+			$extendResources = $this->formatResource( $this->getResourcesToExtend() );
+		} else {
+			$extendResources = [];
+		}
+
 
 		return [
 			"form_name" => $this->resourceConfig->resource_name,
 			"table"     => $this->resourceConfig->resource_table,
-			"fields"    => $fields
+//			"childResources" => $childResources,
+			"extends"   => $extendResources,
+			"fields"    => $this->formatFieldKeys( $fields ),
 		];
 
 	}
